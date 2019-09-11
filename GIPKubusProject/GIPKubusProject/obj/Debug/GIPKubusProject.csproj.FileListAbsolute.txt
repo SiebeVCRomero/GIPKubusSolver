@@ -1,0 +1,10 @@
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\bin\Debug\GIPKubusProject.exe.config
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\bin\Debug\GIPKubusProject.exe
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\bin\Debug\GIPKubusProject.pdb
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.csprojAssemblyReference.cache
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.Properties.Resources.resources
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.csproj.GenerateResource.cache
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.csproj.CoreCompileInputs.cache
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.exe
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.pdb
+C:\Users\vcsie\source\repos\5ITN2-SIEBE\GIPKubusProject\GIPKubusProject\obj\Debug\GIPKubusProject.KubusSolverForm.resources
