@@ -12,6 +12,11 @@ namespace GIPKubusProject
     {
         #region Normaal
 
+        /// <summary>
+        /// Draaien van de bovenste zijde van de kubus met de klok mee
+        /// </summary>
+        /// <param name="lstBlokjes">Al de blokjes voor de draai te berekenen</param>
+        /// <returns></returns>
         public static List<Blokje> U(List<Blokje> lstBlokjes)
         {
             #region Input
@@ -148,10 +153,43 @@ namespace GIPKubusProject
 
         }*/
 
-        /*public static List<Blokje> F()
+        public static List<Blokje> F(List<Blokje> lstBlokjes)
         {
+            #region Input
 
-        }*/
+            //Front Vlak - GREEN
+            Blokje GCorner1 = lstBlokjes.Find(b => b.AdresBlokje == "FrontLeftUp");
+            Blokje GEdge2 = lstBlokjes.Find(b =>  b.AdresBlokje == "FrontMiddelUp");
+            Blokje GCorner3 = lstBlokjes.Find(b => b.AdresBlokje == "FrontRightUp");
+            Blokje GEdge4 = lstBlokjes.Find(b => b.AdresBlokje == "FrontLeftMiddle");
+            Blokje GEdge6 = lstBlokjes.Find(b => b.AdresBlokje == "FrontRightMiddle");
+            Blokje GCorner7 = lstBlokjes.Find(b => b.AdresBlokje == "FrontLeftDown");
+            Blokje GEdge8 = lstBlokjes.Find(b => b.AdresBlokje == "FrontMiddleDown");
+            Blokje GCorner9 = lstBlokjes.Find(b => b.AdresBlokje == "FrontRightDown");
+
+            //WHITE
+            Blokje WCorner7 = lstBlokjes.Find(b => b.AdresBlokje == "UpLeftDown");
+            Blokje WEdge8 = lstBlokjes.Find(b => b.AdresBlokje == "UpMiddleDown");
+            Blokje WCorner9 = lstBlokjes.Find(b => b.AdresBlokje == "UpRightDown");
+
+            //RED
+            Blokje RCorner1 = lstBlokjes.Find(b => b.AdresBlokje == "RightLeftUp");
+            Blokje REdge4 = lstBlokjes.Find(b => b.AdresBlokje == "RightLeftMiddle");
+            Blokje RCorner7 = lstBlokjes.Find(b => b.AdresBlokje == "RightLeftDown");
+
+            //YELLOW
+            Blokje YCorner1 = lstBlokjes.Find(b => b.AdresBlokje == "DownLeftUp");
+            Blokje YEdge2 = lstBlokjes.Find(b => b.AdresBlokje == "DownMiddleUp");
+            Blokje YCorner3 = lstBlokjes.Find(b => b.AdresBlokje == "DownRightUp");
+
+            //ORANGE
+            Blokje OCorner3 = lstBlokjes.Find(b => b.AdresBlokje == "LeftRightUp");
+            Blokje OEdge6 = lstBlokjes.Find(b => b.AdresBlokje == "LeftRightMiddle");
+            Blokje OCorner9 = lstBlokjes.Find(b => b.AdresBlokje == "LeftRightDown");
+
+            return lstBlokjes;
+            #endregion
+        }
 
         /*public static List<Blokje> B()
         {
