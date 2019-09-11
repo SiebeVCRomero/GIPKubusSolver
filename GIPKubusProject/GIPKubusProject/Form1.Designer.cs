@@ -552,6 +552,7 @@
             this.UpPrime.TabIndex = 51;
             this.UpPrime.Text = "U\'";
             this.UpPrime.UseVisualStyleBackColor = false;
+            this.UpPrime.Click += new System.EventHandler(this.UpPrime_Click);
             // 
             // Down
             // 

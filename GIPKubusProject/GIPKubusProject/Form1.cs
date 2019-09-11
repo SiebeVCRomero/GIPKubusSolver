@@ -76,6 +76,11 @@ namespace GIPKubusProject
             OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
             OCorner9 = new Blokje("OCorner9", "LeftRightDown");
 
+        private void UpPrime_Click(object sender, EventArgs e)
+        {
+            LeftLeftDown.BackColor = Color.Green;
+        }
+
         #endregion
 
         /// <summary>
@@ -172,16 +177,16 @@ namespace GIPKubusProject
             UpLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "UpLeftDown").KleurBlokje;
             UpMiddleDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "UpMiddleDown").KleurBlokje;
             UpRightDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "UpRightDown").KleurBlokje;
-            //RIGHT - RED
-            LeftLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftUp").KleurBlokje;
-            LeftMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightMiddleUp").KleurBlokje;
-            LeftRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightUp").KleurBlokje;
-            LeftLeftMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftMiddle").KleurBlokje;
-            RightPanel.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightPanel").KleurBlokje;
-            LeftRightMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightMiddle").KleurBlokje;
-            LeftLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftDown").KleurBlokje;
-            LeftMiddleDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightMiddleDown").KleurBlokje;
-            LeftRightDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightDown").KleurBlokje;
+            //RIGHT - ORANGE
+            LeftLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftUp").KleurBlokje;
+            LeftMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftMiddleUp").KleurBlokje;
+            LeftRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftRightUp").KleurBlokje;
+            LeftLeftMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftMiddle").KleurBlokje;
+            RightPanel.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftPanel").KleurBlokje;
+            LeftRightMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftRightMiddle").KleurBlokje;
+            LeftLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftDown").KleurBlokje;
+            LeftMiddleDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftMiddleDown").KleurBlokje;
+            LeftRightDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftRightDown").KleurBlokje;
             //DOWN - YELLOW
             DownLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownLeftUp").KleurBlokje;
             DownMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownMiddleUp").KleurBlokje;
@@ -192,16 +197,16 @@ namespace GIPKubusProject
             DownLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownLeftDown").KleurBlokje;
             DownMiddleDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownMiddleDown").KleurBlokje;
             DownRightDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownRightDown").KleurBlokje;
-            //LEFT - ORANGE
-            RightLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftUp").KleurBlokje;
-            RightMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftMiddleUp").KleurBlokje;
-            RightRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftRightUp").KleurBlokje;
-            RightLeftMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftMiddle").KleurBlokje;
+            //LEFT - RED
+            RightLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftUp").KleurBlokje;
+            RightMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightMiddleUp").KleurBlokje;
+            RightRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightUp").KleurBlokje;
+            RightLeftMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftMiddle").KleurBlokje;
             LeftPanel.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftPanel").KleurBlokje;
-            RightRightMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftRightMiddle").KleurBlokje;
-            RightLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftDown").KleurBlokje;
-            RightMiddleDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftMiddleDown").KleurBlokje;
-            RightRightDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftRightDown").KleurBlokje;
+            RightRightMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightMiddle").KleurBlokje;
+            RightLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftDown").KleurBlokje;
+            RightMiddleDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightMiddleDown").KleurBlokje;
+            RightRightDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightDown").KleurBlokje;
 
 
 
