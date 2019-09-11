@@ -539,6 +539,7 @@
             this.Up.TabIndex = 50;
             this.Up.Text = "U";
             this.Up.UseVisualStyleBackColor = false;
+            this.Up.Click += new System.EventHandler(this.Up_Click);
             // 
             // UpPrime
             // 

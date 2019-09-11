@@ -18,7 +18,7 @@ namespace GIPKubusProject
         /// <summary>
         /// Adres van het blokje
         /// </summary>
-        public System.Windows.Forms.Panel AdresBlokje { get; set; }
+        public string AdresBlokje { get; set; }
         /// <summary>
         /// Kleur van het blokje
         /// </summary>
@@ -26,7 +26,7 @@ namespace GIPKubusProject
         #endregion
 
 
-        public Blokje(string naam, System.Windows.Forms.Panel adresBlokje)
+        public Blokje(string naam, string adresBlokje)
         {
             switch (naam.Substring(0,1))
             {

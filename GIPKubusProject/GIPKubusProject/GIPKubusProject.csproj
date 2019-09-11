@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Blokje.cs" />
-    <Compile Include="Blokjes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
