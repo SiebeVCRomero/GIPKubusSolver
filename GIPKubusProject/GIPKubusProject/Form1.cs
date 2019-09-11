@@ -12,7 +12,8 @@ namespace GIPKubusProject
 {
     public partial class KubusSolverForm : System.Windows.Forms.Form
     {
-        #region Blokjes + lijst
+        //Al het genereren van de blokjes en de lijst voor de parameters van de funties (Turns)
+        #region Blokjes + Lijst
 
         List<Blokje> AlleBlokjes = new List<Blokje>();
 
@@ -76,12 +77,13 @@ namespace GIPKubusProject
             OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
             OCorner9 = new Blokje("OCorner9", "LeftRightDown");
 
+        #endregion
+
         private void UpPrime_Click(object sender, EventArgs e)
         {
-            LeftLeftDown.BackColor = Color.Green;
+            Colorer(Turns.UPrime(AlleBlokjes));
         }
 
-        #endregion
 
         /// <summary>
         /// vult de list "AlleBlokjes" in
@@ -144,6 +146,10 @@ namespace GIPKubusProject
             AlleBlokjes.Add(OCorner9);
         }
 
+        /// <summary>
+        /// Kleurt de kubus volgens de list
+        /// </summary>
+        /// <param name="lijstBlokjes">List volgens te kleuren</param>
         private void Colorer(List<Blokje> lijstBlokjes)
         {
             //Adres geven
