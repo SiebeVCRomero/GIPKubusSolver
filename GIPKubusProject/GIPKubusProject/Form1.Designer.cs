@@ -37,15 +37,15 @@
             this.UpRightDown = new System.Windows.Forms.Panel();
             this.UpMiddleDown = new System.Windows.Forms.Panel();
             this.UpLeftDown = new System.Windows.Forms.Panel();
-            this.RightRightDown = new System.Windows.Forms.Panel();
-            this.RightRightMiddle = new System.Windows.Forms.Panel();
-            this.RightMiddleDown = new System.Windows.Forms.Panel();
-            this.RightLeftDown = new System.Windows.Forms.Panel();
-            this.RightRightUp = new System.Windows.Forms.Panel();
+            this.LeftRightDown = new System.Windows.Forms.Panel();
+            this.LeftRightMiddle = new System.Windows.Forms.Panel();
+            this.LeftMiddleDown = new System.Windows.Forms.Panel();
+            this.LeftLeftDown = new System.Windows.Forms.Panel();
+            this.LeftRightUp = new System.Windows.Forms.Panel();
             this.LeftPanel = new System.Windows.Forms.Panel();
-            this.RightLeftMiddle = new System.Windows.Forms.Panel();
-            this.RightMiddleUp = new System.Windows.Forms.Panel();
-            this.RightLeftUp = new System.Windows.Forms.Panel();
+            this.LeftLeftMiddle = new System.Windows.Forms.Panel();
+            this.LeftMiddleUp = new System.Windows.Forms.Panel();
+            this.LeftLeftUp = new System.Windows.Forms.Panel();
             this.BackRightDown = new System.Windows.Forms.Panel();
             this.BackRightMiddle = new System.Windows.Forms.Panel();
             this.BackMiddleDown = new System.Windows.Forms.Panel();
@@ -64,15 +64,15 @@
             this.FrontLeftMiddle = new System.Windows.Forms.Panel();
             this.FrontMiddelUp = new System.Windows.Forms.Panel();
             this.FrontLeftUp = new System.Windows.Forms.Panel();
-            this.LeftRightDown = new System.Windows.Forms.Panel();
-            this.LeftRightMiddle = new System.Windows.Forms.Panel();
-            this.LeftMiddleDown = new System.Windows.Forms.Panel();
-            this.LeftLeftDown = new System.Windows.Forms.Panel();
-            this.LeftRightUp = new System.Windows.Forms.Panel();
+            this.RightRightDown = new System.Windows.Forms.Panel();
+            this.RightRightMiddle = new System.Windows.Forms.Panel();
+            this.RightMiddleDown = new System.Windows.Forms.Panel();
+            this.RightLeftDown = new System.Windows.Forms.Panel();
+            this.RightRightUp = new System.Windows.Forms.Panel();
             this.RightPanel = new System.Windows.Forms.Panel();
-            this.LeftLeftMiddle = new System.Windows.Forms.Panel();
-            this.LeftMiddleUp = new System.Windows.Forms.Panel();
-            this.LeftLeftUp = new System.Windows.Forms.Panel();
+            this.RightLeftMiddle = new System.Windows.Forms.Panel();
+            this.RightMiddleUp = new System.Windows.Forms.Panel();
+            this.RightLeftUp = new System.Windows.Forms.Panel();
             this.DownRightDown = new System.Windows.Forms.Panel();
             this.DownRightMiddle = new System.Windows.Forms.Panel();
             this.DownMiddleDown = new System.Windows.Forms.Panel();
@@ -168,45 +168,45 @@
             this.UpLeftDown.Size = new System.Drawing.Size(45, 45);
             this.UpLeftDown.TabIndex = 2;
             // 
-            // RightRightDown
+            // LeftRightDown
             // 
-            this.RightRightDown.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightRightDown.Location = new System.Drawing.Point(581, 370);
-            this.RightRightDown.Name = "RightRightDown";
-            this.RightRightDown.Size = new System.Drawing.Size(45, 45);
-            this.RightRightDown.TabIndex = 12;
+            this.LeftRightDown.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftRightDown.Location = new System.Drawing.Point(581, 370);
+            this.LeftRightDown.Name = "LeftRightDown";
+            this.LeftRightDown.Size = new System.Drawing.Size(45, 45);
+            this.LeftRightDown.TabIndex = 12;
             // 
-            // RightRightMiddle
+            // LeftRightMiddle
             // 
-            this.RightRightMiddle.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightRightMiddle.Location = new System.Drawing.Point(581, 319);
-            this.RightRightMiddle.Name = "RightRightMiddle";
-            this.RightRightMiddle.Size = new System.Drawing.Size(45, 45);
-            this.RightRightMiddle.TabIndex = 13;
+            this.LeftRightMiddle.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftRightMiddle.Location = new System.Drawing.Point(581, 319);
+            this.LeftRightMiddle.Name = "LeftRightMiddle";
+            this.LeftRightMiddle.Size = new System.Drawing.Size(45, 45);
+            this.LeftRightMiddle.TabIndex = 13;
             // 
-            // RightMiddleDown
+            // LeftMiddleDown
             // 
-            this.RightMiddleDown.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightMiddleDown.Location = new System.Drawing.Point(530, 370);
-            this.RightMiddleDown.Name = "RightMiddleDown";
-            this.RightMiddleDown.Size = new System.Drawing.Size(45, 45);
-            this.RightMiddleDown.TabIndex = 10;
+            this.LeftMiddleDown.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftMiddleDown.Location = new System.Drawing.Point(530, 370);
+            this.LeftMiddleDown.Name = "LeftMiddleDown";
+            this.LeftMiddleDown.Size = new System.Drawing.Size(45, 45);
+            this.LeftMiddleDown.TabIndex = 10;
             // 
-            // RightLeftDown
+            // LeftLeftDown
             // 
-            this.RightLeftDown.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightLeftDown.Location = new System.Drawing.Point(479, 370);
-            this.RightLeftDown.Name = "RightLeftDown";
-            this.RightLeftDown.Size = new System.Drawing.Size(45, 45);
-            this.RightLeftDown.TabIndex = 8;
+            this.LeftLeftDown.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftLeftDown.Location = new System.Drawing.Point(479, 370);
+            this.LeftLeftDown.Name = "LeftLeftDown";
+            this.LeftLeftDown.Size = new System.Drawing.Size(45, 45);
+            this.LeftLeftDown.TabIndex = 8;
             // 
-            // RightRightUp
+            // LeftRightUp
             // 
-            this.RightRightUp.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightRightUp.Location = new System.Drawing.Point(581, 268);
-            this.RightRightUp.Name = "RightRightUp";
-            this.RightRightUp.Size = new System.Drawing.Size(45, 45);
-            this.RightRightUp.TabIndex = 6;
+            this.LeftRightUp.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftRightUp.Location = new System.Drawing.Point(581, 268);
+            this.LeftRightUp.Name = "LeftRightUp";
+            this.LeftRightUp.Size = new System.Drawing.Size(45, 45);
+            this.LeftRightUp.TabIndex = 6;
             // 
             // LeftPanel
             // 
@@ -216,29 +216,29 @@
             this.LeftPanel.Size = new System.Drawing.Size(45, 45);
             this.LeftPanel.TabIndex = 11;
             // 
-            // RightLeftMiddle
+            // LeftLeftMiddle
             // 
-            this.RightLeftMiddle.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightLeftMiddle.Location = new System.Drawing.Point(479, 319);
-            this.RightLeftMiddle.Name = "RightLeftMiddle";
-            this.RightLeftMiddle.Size = new System.Drawing.Size(45, 45);
-            this.RightLeftMiddle.TabIndex = 9;
+            this.LeftLeftMiddle.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftLeftMiddle.Location = new System.Drawing.Point(479, 319);
+            this.LeftLeftMiddle.Name = "LeftLeftMiddle";
+            this.LeftLeftMiddle.Size = new System.Drawing.Size(45, 45);
+            this.LeftLeftMiddle.TabIndex = 9;
             // 
-            // RightMiddleUp
+            // LeftMiddleUp
             // 
-            this.RightMiddleUp.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightMiddleUp.Location = new System.Drawing.Point(530, 268);
-            this.RightMiddleUp.Name = "RightMiddleUp";
-            this.RightMiddleUp.Size = new System.Drawing.Size(45, 45);
-            this.RightMiddleUp.TabIndex = 7;
+            this.LeftMiddleUp.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftMiddleUp.Location = new System.Drawing.Point(530, 268);
+            this.LeftMiddleUp.Name = "LeftMiddleUp";
+            this.LeftMiddleUp.Size = new System.Drawing.Size(45, 45);
+            this.LeftMiddleUp.TabIndex = 7;
             // 
-            // RightLeftUp
+            // LeftLeftUp
             // 
-            this.RightLeftUp.BackColor = System.Drawing.Color.DarkOrange;
-            this.RightLeftUp.Location = new System.Drawing.Point(479, 268);
-            this.RightLeftUp.Name = "RightLeftUp";
-            this.RightLeftUp.Size = new System.Drawing.Size(45, 45);
-            this.RightLeftUp.TabIndex = 5;
+            this.LeftLeftUp.BackColor = System.Drawing.Color.DarkOrange;
+            this.LeftLeftUp.Location = new System.Drawing.Point(479, 268);
+            this.LeftLeftUp.Name = "LeftLeftUp";
+            this.LeftLeftUp.Size = new System.Drawing.Size(45, 45);
+            this.LeftLeftUp.TabIndex = 5;
             // 
             // BackRightDown
             // 
@@ -384,45 +384,45 @@
             this.FrontLeftUp.Size = new System.Drawing.Size(45, 45);
             this.FrontLeftUp.TabIndex = 23;
             // 
-            // LeftRightDown
+            // RightRightDown
             // 
-            this.LeftRightDown.BackColor = System.Drawing.Color.Red;
-            this.LeftRightDown.Location = new System.Drawing.Point(906, 370);
-            this.LeftRightDown.Name = "LeftRightDown";
-            this.LeftRightDown.Size = new System.Drawing.Size(45, 45);
-            this.LeftRightDown.TabIndex = 39;
+            this.RightRightDown.BackColor = System.Drawing.Color.Red;
+            this.RightRightDown.Location = new System.Drawing.Point(906, 370);
+            this.RightRightDown.Name = "RightRightDown";
+            this.RightRightDown.Size = new System.Drawing.Size(45, 45);
+            this.RightRightDown.TabIndex = 39;
             // 
-            // LeftRightMiddle
+            // RightRightMiddle
             // 
-            this.LeftRightMiddle.BackColor = System.Drawing.Color.Red;
-            this.LeftRightMiddle.Location = new System.Drawing.Point(906, 319);
-            this.LeftRightMiddle.Name = "LeftRightMiddle";
-            this.LeftRightMiddle.Size = new System.Drawing.Size(45, 45);
-            this.LeftRightMiddle.TabIndex = 40;
+            this.RightRightMiddle.BackColor = System.Drawing.Color.Red;
+            this.RightRightMiddle.Location = new System.Drawing.Point(906, 319);
+            this.RightRightMiddle.Name = "RightRightMiddle";
+            this.RightRightMiddle.Size = new System.Drawing.Size(45, 45);
+            this.RightRightMiddle.TabIndex = 40;
             // 
-            // LeftMiddleDown
+            // RightMiddleDown
             // 
-            this.LeftMiddleDown.BackColor = System.Drawing.Color.Red;
-            this.LeftMiddleDown.Location = new System.Drawing.Point(855, 370);
-            this.LeftMiddleDown.Name = "LeftMiddleDown";
-            this.LeftMiddleDown.Size = new System.Drawing.Size(45, 45);
-            this.LeftMiddleDown.TabIndex = 37;
+            this.RightMiddleDown.BackColor = System.Drawing.Color.Red;
+            this.RightMiddleDown.Location = new System.Drawing.Point(855, 370);
+            this.RightMiddleDown.Name = "RightMiddleDown";
+            this.RightMiddleDown.Size = new System.Drawing.Size(45, 45);
+            this.RightMiddleDown.TabIndex = 37;
             // 
-            // LeftLeftDown
+            // RightLeftDown
             // 
-            this.LeftLeftDown.BackColor = System.Drawing.Color.Red;
-            this.LeftLeftDown.Location = new System.Drawing.Point(804, 370);
-            this.LeftLeftDown.Name = "LeftLeftDown";
-            this.LeftLeftDown.Size = new System.Drawing.Size(45, 45);
-            this.LeftLeftDown.TabIndex = 35;
+            this.RightLeftDown.BackColor = System.Drawing.Color.Red;
+            this.RightLeftDown.Location = new System.Drawing.Point(804, 370);
+            this.RightLeftDown.Name = "RightLeftDown";
+            this.RightLeftDown.Size = new System.Drawing.Size(45, 45);
+            this.RightLeftDown.TabIndex = 35;
             // 
-            // LeftRightUp
+            // RightRightUp
             // 
-            this.LeftRightUp.BackColor = System.Drawing.Color.Red;
-            this.LeftRightUp.Location = new System.Drawing.Point(906, 268);
-            this.LeftRightUp.Name = "LeftRightUp";
-            this.LeftRightUp.Size = new System.Drawing.Size(45, 45);
-            this.LeftRightUp.TabIndex = 33;
+            this.RightRightUp.BackColor = System.Drawing.Color.Red;
+            this.RightRightUp.Location = new System.Drawing.Point(906, 268);
+            this.RightRightUp.Name = "RightRightUp";
+            this.RightRightUp.Size = new System.Drawing.Size(45, 45);
+            this.RightRightUp.TabIndex = 33;
             // 
             // RightPanel
             // 
@@ -432,29 +432,29 @@
             this.RightPanel.Size = new System.Drawing.Size(45, 45);
             this.RightPanel.TabIndex = 38;
             // 
-            // LeftLeftMiddle
+            // RightLeftMiddle
             // 
-            this.LeftLeftMiddle.BackColor = System.Drawing.Color.Red;
-            this.LeftLeftMiddle.Location = new System.Drawing.Point(804, 319);
-            this.LeftLeftMiddle.Name = "LeftLeftMiddle";
-            this.LeftLeftMiddle.Size = new System.Drawing.Size(45, 45);
-            this.LeftLeftMiddle.TabIndex = 36;
+            this.RightLeftMiddle.BackColor = System.Drawing.Color.Red;
+            this.RightLeftMiddle.Location = new System.Drawing.Point(804, 319);
+            this.RightLeftMiddle.Name = "RightLeftMiddle";
+            this.RightLeftMiddle.Size = new System.Drawing.Size(45, 45);
+            this.RightLeftMiddle.TabIndex = 36;
             // 
-            // LeftMiddleUp
+            // RightMiddleUp
             // 
-            this.LeftMiddleUp.BackColor = System.Drawing.Color.Red;
-            this.LeftMiddleUp.Location = new System.Drawing.Point(855, 268);
-            this.LeftMiddleUp.Name = "LeftMiddleUp";
-            this.LeftMiddleUp.Size = new System.Drawing.Size(45, 45);
-            this.LeftMiddleUp.TabIndex = 34;
+            this.RightMiddleUp.BackColor = System.Drawing.Color.Red;
+            this.RightMiddleUp.Location = new System.Drawing.Point(855, 268);
+            this.RightMiddleUp.Name = "RightMiddleUp";
+            this.RightMiddleUp.Size = new System.Drawing.Size(45, 45);
+            this.RightMiddleUp.TabIndex = 34;
             // 
-            // LeftLeftUp
+            // RightLeftUp
             // 
-            this.LeftLeftUp.BackColor = System.Drawing.Color.Red;
-            this.LeftLeftUp.Location = new System.Drawing.Point(804, 268);
-            this.LeftLeftUp.Name = "LeftLeftUp";
-            this.LeftLeftUp.Size = new System.Drawing.Size(45, 45);
-            this.LeftLeftUp.TabIndex = 32;
+            this.RightLeftUp.BackColor = System.Drawing.Color.Red;
+            this.RightLeftUp.Location = new System.Drawing.Point(804, 268);
+            this.RightLeftUp.Name = "RightLeftUp";
+            this.RightLeftUp.Size = new System.Drawing.Size(45, 45);
+            this.RightLeftUp.TabIndex = 32;
             // 
             // DownRightDown
             // 
@@ -700,15 +700,15 @@
             this.Controls.Add(this.DownLeftMIddle);
             this.Controls.Add(this.DownMiddleUp);
             this.Controls.Add(this.DownLeftUp);
-            this.Controls.Add(this.LeftRightDown);
-            this.Controls.Add(this.LeftRightMiddle);
-            this.Controls.Add(this.LeftMiddleDown);
-            this.Controls.Add(this.LeftLeftDown);
-            this.Controls.Add(this.LeftRightUp);
+            this.Controls.Add(this.RightRightDown);
+            this.Controls.Add(this.RightRightMiddle);
+            this.Controls.Add(this.RightMiddleDown);
+            this.Controls.Add(this.RightLeftDown);
+            this.Controls.Add(this.RightRightUp);
             this.Controls.Add(this.RightPanel);
-            this.Controls.Add(this.LeftLeftMiddle);
-            this.Controls.Add(this.LeftMiddleUp);
-            this.Controls.Add(this.LeftLeftUp);
+            this.Controls.Add(this.RightLeftMiddle);
+            this.Controls.Add(this.RightMiddleUp);
+            this.Controls.Add(this.RightLeftUp);
             this.Controls.Add(this.FrontRightDown);
             this.Controls.Add(this.FrontRightMiddle);
             this.Controls.Add(this.FrontMiddleDown);
@@ -719,30 +719,30 @@
             this.Controls.Add(this.FrontMiddelUp);
             this.Controls.Add(this.FrontLeftUp);
             this.Controls.Add(this.BackRightDown);
-            this.Controls.Add(this.RightRightDown);
+            this.Controls.Add(this.LeftRightDown);
             this.Controls.Add(this.BackRightMiddle);
             this.Controls.Add(this.UpRightDown);
             this.Controls.Add(this.BackMiddleDown);
-            this.Controls.Add(this.RightRightMiddle);
+            this.Controls.Add(this.LeftRightMiddle);
             this.Controls.Add(this.BackLeftDown);
             this.Controls.Add(this.UpRightMiddle);
             this.Controls.Add(this.BackRightUp);
-            this.Controls.Add(this.RightMiddleDown);
+            this.Controls.Add(this.LeftMiddleDown);
             this.Controls.Add(this.BackPanel);
             this.Controls.Add(this.UpMiddleDown);
             this.Controls.Add(this.BackLeftMiddle);
-            this.Controls.Add(this.RightLeftDown);
+            this.Controls.Add(this.LeftLeftDown);
             this.Controls.Add(this.BackMiddleUp);
             this.Controls.Add(this.BackLeftUp);
             this.Controls.Add(this.UpLeftDown);
-            this.Controls.Add(this.RightRightUp);
+            this.Controls.Add(this.LeftRightUp);
             this.Controls.Add(this.UpRightUp);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.UpPanel);
-            this.Controls.Add(this.RightLeftMiddle);
+            this.Controls.Add(this.LeftLeftMiddle);
             this.Controls.Add(this.UpLeftMiddle);
-            this.Controls.Add(this.RightMiddleUp);
-            this.Controls.Add(this.RightLeftUp);
+            this.Controls.Add(this.LeftMiddleUp);
+            this.Controls.Add(this.LeftLeftUp);
             this.Controls.Add(this.UpMiddleUp);
             this.Controls.Add(this.UpLeftUp);
             this.Name = "KubusSolverForm";
