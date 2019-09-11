@@ -65,14 +65,14 @@ namespace GIPKubusProject
             int OCorner1i = lstBlokjes.IndexOf(OCorner1);
             Blokje OEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "LeftMiddleUp");
             int OEdge2i = lstBlokjes.IndexOf(OEdge2);
-            Blokje OCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "LeftMiddleUp");
+            Blokje OCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "LeftRightUp");
             int OCorner3i = lstBlokjes.IndexOf(OCorner3);
 
             //Wit vlak draaien
             //Corners
             string onthoudWCorner = WCorner1.AdresBlokje;
             WCorner1.AdresBlokje = WCorner3.AdresBlokje;
-            WCorner3.AdresBlokje = WCorner7.AdresBlokje;
+            WCorner3.AdresBlokje = WCorner9.AdresBlokje;
             WCorner9.AdresBlokje = WCorner7.AdresBlokje;
             WCorner7.AdresBlokje = onthoudWCorner;
 
