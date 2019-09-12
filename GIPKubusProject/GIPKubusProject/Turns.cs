@@ -59,11 +59,11 @@ namespace GIPKubusProject
 
 
             //GROEN
-            Blokje GEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "FrontLeftUp");
+            Blokje GEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "FrontMiddleUp");
             int GEdge2i = lstBlokjes.IndexOf(GEdge2);
-            Blokje GCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "FrontMiddleUp");
+            Blokje GCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "FrontRightUp");
             int GCorner3i = lstBlokjes.IndexOf(GCorner3);
-            Blokje GCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "FrontRightUp");
+            Blokje GCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "FrontLeftUp");
             int GCorner1i = lstBlokjes.IndexOf(GCorner1);
 
 
