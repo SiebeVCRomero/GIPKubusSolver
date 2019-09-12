@@ -17,71 +17,76 @@ namespace GIPKubusProject
 
         List<Blokje> AlleBlokjes = new List<Blokje>();
 
-        Blokje GCorner1 = new Blokje("GCorner1", "FrontLeftUp"),
-            GEdge2 = new Blokje("GEdge2", "FrontMiddelUp"),
-            GCorner3 = new Blokje("GCorner3", "FrontRightUp"),
-            GEdge4 = new Blokje("GEdge4", "FrontLeftMiddle"),
-            GCenter = new Blokje("GCenter", "FrontPanel"),
-            GEdge6 = new Blokje("GEdge6", "FrontRightMiddle"),
-            GCorner7 = new Blokje("GCorner7", "FrontLeftDown"),
-            GEdge8 = new Blokje("GEdge8", "FrontMiddleDown"),
-            GCorner9 = new Blokje("GCorner9", "FrontRightDown"),
+        Blokje  GCorner1 = new Blokje("GCorner1", "FrontLeftUp"),
+                GEdge2 = new Blokje("GEdge2", "FrontMiddleUp"),
+                GCorner3 = new Blokje("GCorner3", "FrontRightUp"),
+                GEdge4 = new Blokje("GEdge4", "FrontLeftMiddle"),
+                GCenter = new Blokje("GCenter", "FrontPanel"),
+                GEdge6 = new Blokje("GEdge6", "FrontRightMiddle"),
+                GCorner7 = new Blokje("GCorner7", "FrontLeftDown"),
+                GEdge8 = new Blokje("GEdge8", "FrontMiddleDown"),
+                GCorner9 = new Blokje("GCorner9", "FrontRightDown"),
 
-            BCorner1 = new Blokje("BCorner1", "BackLeftUp"),
-            BEdge2 = new Blokje("BEdge2", "BackMiddleUp"),
-            BCorner3 = new Blokje("BCorner3", "BackRightUp"),
-            BEdge4 = new Blokje("BEdge4", "BackLeftMiddle"),
-            BCenter = new Blokje("BCenter", "BackPanel"),
-            BEdge6 = new Blokje("BEdge6", "BackRightMiddle"),
-            BCorner7 = new Blokje("BCorner7", "BackLeftDown"),
-            BEdge8 = new Blokje("BEdge8", "BackMiddleDown"),
-            BCorner9 = new Blokje("BCorner9", "BackRightDown"),
+                BCorner1 = new Blokje("BCorner1", "BackLeftUp"),
+                BEdge2 = new Blokje("BEdge2", "BackMiddleUp"),
+                BCorner3 = new Blokje("BCorner3", "BackRightUp"),
+                BEdge4 = new Blokje("BEdge4", "BackLeftMiddle"),
+                BCenter = new Blokje("BCenter", "BackPanel"),
+                BEdge6 = new Blokje("BEdge6", "BackRightMiddle"),
+                BCorner7 = new Blokje("BCorner7", "BackLeftDown"),
+                BEdge8 = new Blokje("BEdge8", "BackMiddleDown"),
+                BCorner9 = new Blokje("BCorner9", "BackRightDown"),
 
-            WCorner1 = new Blokje("WCorner1", "UpLeftUp"),
-            WEdge2 = new Blokje("WEdge2", "UpMiddleUp"),
-            WCorner3 = new Blokje("WCorner3", "UpRightUp"),
-            WEdge4 = new Blokje("WEdge4", "UpLeftMiddle"),
-            WCenter = new Blokje("WCenter", "UpPanel"),
-            WEdge6 = new Blokje("WEdge6", "UpRightMiddle"),
-            WCorner7 = new Blokje("WCorner7", "UpLeftDown"),
-            WEdge8 = new Blokje("WEdge8", "UpMiddleDown"),
-            WCorner9 = new Blokje("WCorner9", "UpRightDown"),
+                WCorner1 = new Blokje("WCorner1", "UpLeftUp"),
+                WEdge2 = new Blokje("WEdge2", "UpMiddleUp"),
+                WCorner3 = new Blokje("WCorner3", "UpRightUp"),
+                WEdge4 = new Blokje("WEdge4", "UpLeftMiddle"),
+                WCenter = new Blokje("WCenter", "UpPanel"),
+                WEdge6 = new Blokje("WEdge6", "UpRightMiddle"),
+                WCorner7 = new Blokje("WCorner7", "UpLeftDown"),
+                WEdge8 = new Blokje("WEdge8", "UpMiddleDown"),
+                WCorner9 = new Blokje("WCorner9", "UpRightDown"),
 
-            RCorner1 = new Blokje("RCorner1", "RightLeftUp"),
-            REdge2 = new Blokje("REdge2", "RightMiddleUp"),
-            RCorner3 = new Blokje("RCorner3", "RightRightUp"),
-            REdge4 = new Blokje("REdge4", "RightLeftMiddle"),
-            RCenter = new Blokje("RCenter", "RightPanel"),
-            REdge6 = new Blokje("REdge6", "RightRightMiddle"),
-            RCorner7 = new Blokje("RCorner7", "RightLeftDown"),
-            REdge8 = new Blokje("REdge8", "RightMiddleDown"),
-            RCorner9 = new Blokje("RCorner9", "RightRightDown"),
+                RCorner1 = new Blokje("RCorner1", "RightLeftUp"),
+                REdge2 = new Blokje("REdge2", "RightMiddleUp"),
+                RCorner3 = new Blokje("RCorner3", "RightRightUp"),
+                REdge4 = new Blokje("REdge4", "RightLeftMiddle"),
+                RCenter = new Blokje("RCenter", "RightPanel"),
+                REdge6 = new Blokje("REdge6", "RightRightMiddle"),
+                RCorner7 = new Blokje("RCorner7", "RightLeftDown"),
+                REdge8 = new Blokje("REdge8", "RightMiddleDown"),
+                RCorner9 = new Blokje("RCorner9", "RightRightDown"),
 
-            YCorner1 = new Blokje("YCorner1", "DownLeftUp"),
-            YEdge2 = new Blokje("YEdge2", "DownMiddleUp"),
-            YCorner3 = new Blokje("YCorner3", "DownRightUp"),
-            YEdge4 = new Blokje("YEdge4", "DownLeftMIddle"),
-            YCenter = new Blokje("YCenter", "DownPanel"),
-            YEdge6 = new Blokje("YEdge6", "DownRightMiddle"),
-            YCorner7 = new Blokje("YCorner7", "DownLeftDown"),
-            YEdge8 = new Blokje("YEdge8", "DownMiddleDown"),
-            YCorner9 = new Blokje("YCorner9", "DownRightDown"),
+                YCorner1 = new Blokje("YCorner1", "DownLeftUp"),
+                YEdge2 = new Blokje("YEdge2", "DownMiddleUp"),
+                YCorner3 = new Blokje("YCorner3", "DownRightUp"),
+                YEdge4 = new Blokje("YEdge4", "DownLeftMIddle"),
+                YCenter = new Blokje("YCenter", "DownPanel"),
+                YEdge6 = new Blokje("YEdge6", "DownRightMiddle"),
+                YCorner7 = new Blokje("YCorner7", "DownLeftDown"),
+                YEdge8 = new Blokje("YEdge8", "DownMiddleDown"),
+                YCorner9 = new Blokje("YCorner9", "DownRightDown"),
 
-            OCorner1 = new Blokje("OCorner1", "LeftLeftUp"),
-            OEdge2 = new Blokje("OEdge2", "LeftMiddleUp"),
-            OCorner3 = new Blokje("OCorner3", "LeftRightUp"),
-            OEdge4 = new Blokje("OEdge4", "LeftLeftMiddle"),
-            OCenter = new Blokje("OCenter", "LeftPanel"),
-            OEdge6 = new Blokje("OEdge6", "LeftRightMiddle"),
-            OCorner7 = new Blokje("OCorner7", "LeftLeftDown"),
-            OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
-            OCorner9 = new Blokje("OCorner9", "LeftRightDown");
+                OCorner1 = new Blokje("OCorner1", "LeftLeftUp"),
+                OEdge2 = new Blokje("OEdge2", "LeftMiddleUp"),
+                OCorner3 = new Blokje("OCorner3", "LeftRightUp"),
+                OEdge4 = new Blokje("OEdge4", "LeftLeftMiddle"),
+                OCenter = new Blokje("OCenter", "LeftPanel"),
+                OEdge6 = new Blokje("OEdge6", "LeftRightMiddle"),
+                OCorner7 = new Blokje("OCorner7", "LeftLeftDown"),
+                OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
+                OCorner9 = new Blokje("OCorner9", "LeftRightDown");
 
         #endregion
 
+        private void Front_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.F(AlleBlokjes, false));
+        }
+
         private void UpPrime_Click(object sender, EventArgs e)
         {
-            Colorer(Turns.UPrime(AlleBlokjes));
+            Colorer(Turns.U(AlleBlokjes, true));
         }
 
 
@@ -155,7 +160,7 @@ namespace GIPKubusProject
             //Adres geven
             //FRONT - GREEN
             FrontLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "FrontLeftUp").KleurBlokje;
-            FrontMiddelUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "FrontMiddelUp").KleurBlokje;
+            FrontMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "FrontMiddleUp").KleurBlokje;
             FrontRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "FrontRightUp").KleurBlokje;
             FrontLeftMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "FrontLeftMiddle").KleurBlokje;
             FrontPanel.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "FrontPanel").KleurBlokje;
@@ -189,7 +194,7 @@ namespace GIPKubusProject
             RightMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightMiddleUp").KleurBlokje;
             RightRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightUp").KleurBlokje;
             RightLeftMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftMiddle").KleurBlokje;
-            LeftLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftUp").KleurBlokje; 
+            //LeftLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "LeftLeftUp").KleurBlokje; 
             RightPanel.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightPanel").KleurBlokje;
             RightRightMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightRightMiddle").KleurBlokje;
             RightLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "RightLeftDown").KleurBlokje;
@@ -231,7 +236,7 @@ namespace GIPKubusProject
 
         private void Up_Click(object sender, EventArgs e)
         {
-            Colorer(Turns.U(AlleBlokjes));
+            Colorer(Turns.U(AlleBlokjes, false));
         }
     }
 }

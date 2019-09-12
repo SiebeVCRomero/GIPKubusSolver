@@ -55,15 +55,6 @@
             this.BackLeftMiddle = new System.Windows.Forms.Panel();
             this.BackMiddleUp = new System.Windows.Forms.Panel();
             this.BackLeftUp = new System.Windows.Forms.Panel();
-            this.FrontRightDown = new System.Windows.Forms.Panel();
-            this.FrontRightMiddle = new System.Windows.Forms.Panel();
-            this.FrontMiddleDown = new System.Windows.Forms.Panel();
-            this.FrontLeftDown = new System.Windows.Forms.Panel();
-            this.FrontRightUp = new System.Windows.Forms.Panel();
-            this.FrontPanel = new System.Windows.Forms.Panel();
-            this.FrontLeftMiddle = new System.Windows.Forms.Panel();
-            this.FrontMiddelUp = new System.Windows.Forms.Panel();
-            this.FrontLeftUp = new System.Windows.Forms.Panel();
             this.RightRightDown = new System.Windows.Forms.Panel();
             this.RightRightMiddle = new System.Windows.Forms.Panel();
             this.RightMiddleDown = new System.Windows.Forms.Panel();
@@ -94,6 +85,15 @@
             this.Left = new System.Windows.Forms.Button();
             this.RightPrime = new System.Windows.Forms.Button();
             this.Right = new System.Windows.Forms.Button();
+            this.FrontRightDown = new System.Windows.Forms.Panel();
+            this.FrontRightMiddle = new System.Windows.Forms.Panel();
+            this.FrontMiddleDown = new System.Windows.Forms.Panel();
+            this.FrontLeftDown = new System.Windows.Forms.Panel();
+            this.FrontRightUp = new System.Windows.Forms.Panel();
+            this.FrontPanel = new System.Windows.Forms.Panel();
+            this.FrontLeftMiddle = new System.Windows.Forms.Panel();
+            this.FrontMiddleUp = new System.Windows.Forms.Panel();
+            this.FrontLeftUp = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // UpLeftUp
@@ -311,78 +311,6 @@
             this.BackLeftUp.Name = "BackLeftUp";
             this.BackLeftUp.Size = new System.Drawing.Size(45, 45);
             this.BackLeftUp.TabIndex = 14;
-            // 
-            // FrontRightDown
-            // 
-            this.FrontRightDown.BackColor = System.Drawing.Color.Green;
-            this.FrontRightDown.Location = new System.Drawing.Point(743, 370);
-            this.FrontRightDown.Name = "FrontRightDown";
-            this.FrontRightDown.Size = new System.Drawing.Size(45, 45);
-            this.FrontRightDown.TabIndex = 30;
-            // 
-            // FrontRightMiddle
-            // 
-            this.FrontRightMiddle.BackColor = System.Drawing.Color.Green;
-            this.FrontRightMiddle.Location = new System.Drawing.Point(743, 319);
-            this.FrontRightMiddle.Name = "FrontRightMiddle";
-            this.FrontRightMiddle.Size = new System.Drawing.Size(45, 45);
-            this.FrontRightMiddle.TabIndex = 31;
-            // 
-            // FrontMiddleDown
-            // 
-            this.FrontMiddleDown.BackColor = System.Drawing.Color.Green;
-            this.FrontMiddleDown.Location = new System.Drawing.Point(692, 370);
-            this.FrontMiddleDown.Name = "FrontMiddleDown";
-            this.FrontMiddleDown.Size = new System.Drawing.Size(45, 45);
-            this.FrontMiddleDown.TabIndex = 28;
-            // 
-            // FrontLeftDown
-            // 
-            this.FrontLeftDown.BackColor = System.Drawing.Color.Green;
-            this.FrontLeftDown.Location = new System.Drawing.Point(641, 370);
-            this.FrontLeftDown.Name = "FrontLeftDown";
-            this.FrontLeftDown.Size = new System.Drawing.Size(45, 45);
-            this.FrontLeftDown.TabIndex = 26;
-            // 
-            // FrontRightUp
-            // 
-            this.FrontRightUp.BackColor = System.Drawing.Color.Green;
-            this.FrontRightUp.Location = new System.Drawing.Point(743, 268);
-            this.FrontRightUp.Name = "FrontRightUp";
-            this.FrontRightUp.Size = new System.Drawing.Size(45, 45);
-            this.FrontRightUp.TabIndex = 24;
-            // 
-            // FrontPanel
-            // 
-            this.FrontPanel.BackColor = System.Drawing.Color.Green;
-            this.FrontPanel.Location = new System.Drawing.Point(692, 319);
-            this.FrontPanel.Name = "FrontPanel";
-            this.FrontPanel.Size = new System.Drawing.Size(45, 45);
-            this.FrontPanel.TabIndex = 29;
-            // 
-            // FrontLeftMiddle
-            // 
-            this.FrontLeftMiddle.BackColor = System.Drawing.Color.Green;
-            this.FrontLeftMiddle.Location = new System.Drawing.Point(641, 319);
-            this.FrontLeftMiddle.Name = "FrontLeftMiddle";
-            this.FrontLeftMiddle.Size = new System.Drawing.Size(45, 45);
-            this.FrontLeftMiddle.TabIndex = 27;
-            // 
-            // FrontMiddelUp
-            // 
-            this.FrontMiddelUp.BackColor = System.Drawing.Color.Green;
-            this.FrontMiddelUp.Location = new System.Drawing.Point(692, 268);
-            this.FrontMiddelUp.Name = "FrontMiddelUp";
-            this.FrontMiddelUp.Size = new System.Drawing.Size(45, 45);
-            this.FrontMiddelUp.TabIndex = 25;
-            // 
-            // FrontLeftUp
-            // 
-            this.FrontLeftUp.BackColor = System.Drawing.Color.Green;
-            this.FrontLeftUp.Location = new System.Drawing.Point(641, 268);
-            this.FrontLeftUp.Name = "FrontLeftUp";
-            this.FrontLeftUp.Size = new System.Drawing.Size(45, 45);
-            this.FrontLeftUp.TabIndex = 23;
             // 
             // RightRightDown
             // 
@@ -625,6 +553,7 @@
             this.Front.TabIndex = 54;
             this.Front.Text = "F";
             this.Front.UseVisualStyleBackColor = false;
+            this.Front.Click += new System.EventHandler(this.Front_Click);
             // 
             // LeftPrime
             // 
@@ -674,12 +603,93 @@
             this.Right.Text = "R";
             this.Right.UseVisualStyleBackColor = false;
             // 
+            // FrontRightDown
+            // 
+            this.FrontRightDown.BackColor = System.Drawing.Color.Green;
+            this.FrontRightDown.Location = new System.Drawing.Point(743, 370);
+            this.FrontRightDown.Name = "FrontRightDown";
+            this.FrontRightDown.Size = new System.Drawing.Size(45, 45);
+            this.FrontRightDown.TabIndex = 69;
+            // 
+            // FrontRightMiddle
+            // 
+            this.FrontRightMiddle.BackColor = System.Drawing.Color.Green;
+            this.FrontRightMiddle.Location = new System.Drawing.Point(743, 319);
+            this.FrontRightMiddle.Name = "FrontRightMiddle";
+            this.FrontRightMiddle.Size = new System.Drawing.Size(45, 45);
+            this.FrontRightMiddle.TabIndex = 70;
+            // 
+            // FrontMiddleDown
+            // 
+            this.FrontMiddleDown.BackColor = System.Drawing.Color.Green;
+            this.FrontMiddleDown.Location = new System.Drawing.Point(692, 370);
+            this.FrontMiddleDown.Name = "FrontMiddleDown";
+            this.FrontMiddleDown.Size = new System.Drawing.Size(45, 45);
+            this.FrontMiddleDown.TabIndex = 67;
+            // 
+            // FrontLeftDown
+            // 
+            this.FrontLeftDown.BackColor = System.Drawing.Color.Green;
+            this.FrontLeftDown.Location = new System.Drawing.Point(641, 370);
+            this.FrontLeftDown.Name = "FrontLeftDown";
+            this.FrontLeftDown.Size = new System.Drawing.Size(45, 45);
+            this.FrontLeftDown.TabIndex = 65;
+            // 
+            // FrontRightUp
+            // 
+            this.FrontRightUp.BackColor = System.Drawing.Color.Green;
+            this.FrontRightUp.Location = new System.Drawing.Point(743, 268);
+            this.FrontRightUp.Name = "FrontRightUp";
+            this.FrontRightUp.Size = new System.Drawing.Size(45, 45);
+            this.FrontRightUp.TabIndex = 63;
+            // 
+            // FrontPanel
+            // 
+            this.FrontPanel.BackColor = System.Drawing.Color.Green;
+            this.FrontPanel.Location = new System.Drawing.Point(692, 319);
+            this.FrontPanel.Name = "FrontPanel";
+            this.FrontPanel.Size = new System.Drawing.Size(45, 45);
+            this.FrontPanel.TabIndex = 68;
+            // 
+            // FrontLeftMiddle
+            // 
+            this.FrontLeftMiddle.BackColor = System.Drawing.Color.Green;
+            this.FrontLeftMiddle.Location = new System.Drawing.Point(641, 319);
+            this.FrontLeftMiddle.Name = "FrontLeftMiddle";
+            this.FrontLeftMiddle.Size = new System.Drawing.Size(45, 45);
+            this.FrontLeftMiddle.TabIndex = 66;
+            // 
+            // FrontMiddleUp
+            // 
+            this.FrontMiddleUp.BackColor = System.Drawing.Color.Green;
+            this.FrontMiddleUp.Location = new System.Drawing.Point(692, 268);
+            this.FrontMiddleUp.Name = "FrontMiddleUp";
+            this.FrontMiddleUp.Size = new System.Drawing.Size(45, 45);
+            this.FrontMiddleUp.TabIndex = 64;
+            // 
+            // FrontLeftUp
+            // 
+            this.FrontLeftUp.BackColor = System.Drawing.Color.Green;
+            this.FrontLeftUp.Location = new System.Drawing.Point(641, 268);
+            this.FrontLeftUp.Name = "FrontLeftUp";
+            this.FrontLeftUp.Size = new System.Drawing.Size(45, 45);
+            this.FrontLeftUp.TabIndex = 62;
+            // 
             // KubusSolverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1039, 700);
+            this.Controls.Add(this.FrontRightDown);
+            this.Controls.Add(this.FrontRightMiddle);
+            this.Controls.Add(this.FrontMiddleDown);
+            this.Controls.Add(this.FrontLeftDown);
+            this.Controls.Add(this.FrontRightUp);
+            this.Controls.Add(this.FrontPanel);
+            this.Controls.Add(this.FrontLeftMiddle);
+            this.Controls.Add(this.FrontMiddleUp);
+            this.Controls.Add(this.FrontLeftUp);
             this.Controls.Add(this.LeftPrime);
             this.Controls.Add(this.Left);
             this.Controls.Add(this.RightPrime);
@@ -710,15 +720,6 @@
             this.Controls.Add(this.RightLeftMiddle);
             this.Controls.Add(this.RightMiddleUp);
             this.Controls.Add(this.RightLeftUp);
-            this.Controls.Add(this.FrontRightDown);
-            this.Controls.Add(this.FrontRightMiddle);
-            this.Controls.Add(this.FrontMiddleDown);
-            this.Controls.Add(this.FrontLeftDown);
-            this.Controls.Add(this.FrontRightUp);
-            this.Controls.Add(this.FrontPanel);
-            this.Controls.Add(this.FrontLeftMiddle);
-            this.Controls.Add(this.FrontMiddelUp);
-            this.Controls.Add(this.FrontLeftUp);
             this.Controls.Add(this.BackRightDown);
             this.Controls.Add(this.LeftRightDown);
             this.Controls.Add(this.BackRightMiddle);
@@ -782,15 +783,6 @@
         private System.Windows.Forms.Panel BackLeftMiddle;
         private System.Windows.Forms.Panel BackMiddleUp;
         private System.Windows.Forms.Panel BackLeftUp;
-        private System.Windows.Forms.Panel FrontRightDown;
-        private System.Windows.Forms.Panel FrontRightMiddle;
-        private System.Windows.Forms.Panel FrontMiddleDown;
-        private System.Windows.Forms.Panel FrontLeftDown;
-        private System.Windows.Forms.Panel FrontRightUp;
-        private System.Windows.Forms.Panel FrontPanel;
-        private System.Windows.Forms.Panel FrontLeftMiddle;
-        private System.Windows.Forms.Panel FrontMiddelUp;
-        private System.Windows.Forms.Panel FrontLeftUp;
         private System.Windows.Forms.Panel LeftRightDown;
         private System.Windows.Forms.Panel LeftRightMiddle;
         private System.Windows.Forms.Panel LeftMiddleDown;
@@ -821,6 +813,15 @@
         private System.Windows.Forms.Button Left;
         private System.Windows.Forms.Button RightPrime;
         private System.Windows.Forms.Button Right;
+        private System.Windows.Forms.Panel FrontRightDown;
+        private System.Windows.Forms.Panel FrontRightMiddle;
+        private System.Windows.Forms.Panel FrontMiddleDown;
+        private System.Windows.Forms.Panel FrontLeftDown;
+        private System.Windows.Forms.Panel FrontRightUp;
+        private System.Windows.Forms.Panel FrontPanel;
+        private System.Windows.Forms.Panel FrontLeftMiddle;
+        private System.Windows.Forms.Panel FrontMiddleUp;
+        private System.Windows.Forms.Panel FrontLeftUp;
     }
 }
 
