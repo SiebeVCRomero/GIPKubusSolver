@@ -200,6 +200,12 @@ namespace GIPKubusProject
 
         }*/
 
+        /// <summary>
+        /// Draaien van de voorste laag
+        /// </summary>
+        /// <param name="lstBlokjes">lijst met blokjes</param>
+        /// <param name="isPrime">Indien tegen de klok draaien 'true'</param>
+        /// <returns>Aangepaste lijst</returns>
         public static List<Blokje> F(List<Blokje> lstBlokjes, bool isPrime)
         {
             #region Input
@@ -256,46 +262,90 @@ namespace GIPKubusProject
 
             #endregion
 
-            #region Processing F
+            if (!isPrime)
+            {
+                #region Processing F
+                //Groen Vlak draaien
+                //Corners - GREEN
+                string onthoud = GCorner1.AdresBlokje;
+                GCorner1.AdresBlokje = GCorner3.AdresBlokje;
+                GCorner3.AdresBlokje = GCorner9.AdresBlokje;
+                GCorner9.AdresBlokje = GCorner7.AdresBlokje;
+                GCorner7.AdresBlokje = onthoud;
 
-            //Groen Vlak draaien
-            //Corners - GREEN
-            string onthoud = GCorner1.AdresBlokje;
-            GCorner1.AdresBlokje = GCorner3.AdresBlokje;
-            GCorner3.AdresBlokje = GCorner9.AdresBlokje;
-            GCorner9.AdresBlokje = GCorner7.AdresBlokje;
-            GCorner7.AdresBlokje = onthoud;
+                //Edges - GREEN
+                onthoud = GEdge2.AdresBlokje;
+                GEdge2.AdresBlokje = GEdge6.AdresBlokje;
+                GEdge6.AdresBlokje = GEdge8.AdresBlokje;
+                GEdge8.AdresBlokje = GEdge4.AdresBlokje;
+                GEdge4.AdresBlokje = onthoud;
 
-            //Edges - GREEN
-            onthoud = GEdge2.AdresBlokje;
-            GEdge2.AdresBlokje = GEdge6.AdresBlokje;
-            GEdge6.AdresBlokje = GEdge8.AdresBlokje;
-            GEdge8.AdresBlokje = GEdge4.AdresBlokje;
-            GEdge4.AdresBlokje = onthoud;
+                //Zijkanten
+                //Corner links 
+                onthoud = WCorner7.AdresBlokje;
+                WCorner7.AdresBlokje = RCorner1.AdresBlokje;
+                RCorner1.AdresBlokje = YCorner3.AdresBlokje;
+                YCorner3.AdresBlokje = OCorner9.AdresBlokje;
+                OCorner9.AdresBlokje = onthoud;
 
-            //Zijkanten
-            //Corner links 
-            onthoud = WCorner7.AdresBlokje;
-            WCorner7.AdresBlokje = RCorner1.AdresBlokje;
-            RCorner1.AdresBlokje = YCorner3.AdresBlokje;
-            YCorner3.AdresBlokje = OCorner9.AdresBlokje;
-            OCorner9.AdresBlokje = onthoud;
+                //Corner Rechts
+                onthoud = WCorner9.AdresBlokje;
+                WCorner9.AdresBlokje = RCorner7.AdresBlokje;
+                RCorner7.AdresBlokje = YCorner1.AdresBlokje;
+                YCorner1.AdresBlokje = OCorner3.AdresBlokje;
+                OCorner3.AdresBlokje = onthoud;
 
-            //Corner Rechts
-            onthoud = WCorner9.AdresBlokje;
-            WCorner9.AdresBlokje = RCorner7.AdresBlokje;
-            RCorner7.AdresBlokje = YCorner1.AdresBlokje;
-            YCorner1.AdresBlokje = OCorner3.AdresBlokje;
-            OCorner3.AdresBlokje = onthoud;
+                //Edges
+                onthoud = WEdge8.AdresBlokje;
+                WEdge8.AdresBlokje = REdge4.AdresBlokje;
+                REdge4.AdresBlokje = YEdge2.AdresBlokje;
+                YEdge2.AdresBlokje = OEdge6.AdresBlokje;
+                OEdge6.AdresBlokje = onthoud;
 
-            //Edges
-            onthoud = WEdge8.AdresBlokje;
-            WEdge8.AdresBlokje = REdge4.AdresBlokje;
-            REdge4.AdresBlokje = YEdge2.AdresBlokje;
-            YEdge2.AdresBlokje = OEdge6.AdresBlokje;
-            OEdge6.AdresBlokje = onthoud;
+                #endregion
+            }
+            else
+            {
+                #region Processing F'
+                //Groen Vlak draaien
+                //Corners
+                string onthoud = GCorner1.AdresBlokje;
+                GCorner1.AdresBlokje = GCorner7.AdresBlokje;
+                GCorner7.AdresBlokje = GCorner9.AdresBlokje;
+                GCorner9.AdresBlokje = GCorner3.AdresBlokje;
+                GCorner3.AdresBlokje = onthoud;
 
-            #endregion
+                //Edge
+                onthoud = GEdge2.AdresBlokje;
+                GEdge2.AdresBlokje = GEdge4.AdresBlokje;
+                GEdge4.AdresBlokje = GEdge8.AdresBlokje;
+                GEdge8.AdresBlokje = GEdge6.AdresBlokje;
+                GEdge6.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Corner Links
+                onthoud = YCorner1.AdresBlokje;
+                YCorner1.AdresBlokje = RCorner7.AdresBlokje;
+                RCorner7.AdresBlokje = WCorner9.AdresBlokje;
+                WCorner9.AdresBlokje = OCorner3.AdresBlokje;
+                OCorner3.AdresBlokje = onthoud;
+
+                //Corner Rechts
+                onthoud = YCorner3.AdresBlokje;
+                YCorner3.AdresBlokje = RCorner1.AdresBlokje;
+                RCorner1.AdresBlokje = WCorner7.AdresBlokje;
+                WCorner7.AdresBlokje = OCorner9.AdresBlokje;
+                OCorner9.AdresBlokje = onthoud;
+
+                //Edges
+                onthoud = YEdge2.AdresBlokje;
+                YEdge2.AdresBlokje = REdge4.AdresBlokje;
+                REdge4.AdresBlokje = WEdge8.AdresBlokje;
+                WEdge8.AdresBlokje = OEdge6.AdresBlokje;
+                OEdge6.AdresBlokje = onthoud;
+
+                #endregion
+            }
 
             #region List Maken
 

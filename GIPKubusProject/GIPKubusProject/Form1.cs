@@ -79,6 +79,11 @@ namespace GIPKubusProject
 
         #endregion
 
+        private void FrontPrime_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.F(AlleBlokjes, true));
+        }
+
         private void Front_Click(object sender, EventArgs e)
         {
             Colorer(Turns.F(AlleBlokjes, false));

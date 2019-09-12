@@ -541,6 +541,7 @@
             this.FrontPrime.TabIndex = 55;
             this.FrontPrime.Text = "F\'";
             this.FrontPrime.UseVisualStyleBackColor = false;
+            this.FrontPrime.Click += new System.EventHandler(this.FrontPrime_Click);
             // 
             // Front
             // 
