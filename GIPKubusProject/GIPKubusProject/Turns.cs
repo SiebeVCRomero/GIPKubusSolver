@@ -10,15 +10,16 @@ namespace GIPKubusProject
 
     public class Turns
     {
-        #region Normaal
+        #region Al gedaan
 
         /// <summary>
-        /// Draaien van de bovenste zijde van de kubus met de klok mee
+        /// Draaien van de bovenste zijde
         /// </summary>
-        /// <param name="lstBlokjes">Al de blokjes voor de draai te berekenen</param>
+        /// <param name="isPrime">True indien met de klok meedraaien</param>
         /// <returns></returns>
         public static List<Blokje> U(List<Blokje> lstBlokjes, bool isPrime)
         {
+            //Al de draaiende blokjes van de U laag
             #region Input
 
             //WIT
@@ -80,7 +81,8 @@ namespace GIPKubusProject
 
             if (!isPrime)
             {
-                #region ProcessingU
+                //Met de klok mee
+                #region Processing U
                 //Wit vlak draaien
                 //Corners
                 string onthoudWCorner = WCorner1.AdresBlokje;
@@ -124,7 +126,8 @@ namespace GIPKubusProject
             }
             else
             {
-                #region ProcessingU'
+                //Tegen de klok in
+                #region Processing U'
 
                 //WIT VLAK DRAAIEN
                 //Corners
@@ -165,7 +168,7 @@ namespace GIPKubusProject
                 OEdge2.AdresBlokje = onthoud;
                 #endregion
             }
-
+            //Maken van lijst voor de output
             #region Lijst Maken
 
             //List aanpassen
@@ -195,19 +198,196 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
-        /*public static List<Blokje> D()
-        {   
+        /// <summary>
+        /// Draaien van de onderste zijde 
+        /// </summary>
+        /// <param name="lstBlokjes"></param>
+        /// <param name="isPrime">True indien met de klok meedraaien</param>
+        /// <returns></returns>
+        public static List<Blokje> D(List<Blokje> lstBlokjes, bool isPrime)
+        {
+            //Al de draaiende blokjes van de D laag
+            #region Input
 
-        }*/
+            //Yellow Back
+            Blokje YCorner1 = lstBlokjes.Find(z => z.AdresBlokje == "DownLeftUp");
+            int YCorner1i = lstBlokjes.IndexOf(YCorner1);
+            Blokje YEdge2 = lstBlokjes.Find(z => z.AdresBlokje == "DownMiddleUp");
+            int YEdge2i = lstBlokjes.IndexOf(YEdge2);
+            Blokje YCorner3 = lstBlokjes.Find(z => z.AdresBlokje == "DownRightUp");
+            int YCorner3i = lstBlokjes.IndexOf(YCorner3);
+            Blokje YEdge4 = lstBlokjes.Find(z => z.AdresBlokje == "DownLeftMiddle");
+            int YEdge4i = lstBlokjes.IndexOf(YEdge4);
+            Blokje YEdge6 = lstBlokjes.Find(z => z.AdresBlokje == "DownRightMiddle");
+            int YEdge6i = lstBlokjes.IndexOf(YEdge6);
+            Blokje YCorner7 = lstBlokjes.Find(z => z.AdresBlokje == "DownLeftDown");
+            int YCorner7i = lstBlokjes.IndexOf(YCorner7);
+            Blokje YEdge8 = lstBlokjes.Find(z => z.AdresBlokje == "DownMiddleDown");
+            int YEdge8i = lstBlokjes.IndexOf(YEdge8);
+            Blokje YCorner9 = lstBlokjes.Find(z => z.AdresBlokje == "DownRightDown");
+            int YCorner9i = lstBlokjes.IndexOf(YCorner9);
+
+            //Zijkanten
+            //Green - Front
+            Blokje GCorner7 = lstBlokjes.Find(z => z.AdresBlokje == "FrontLeftDown");
+            int GCorner7i = lstBlokjes.IndexOf(GCorner7);
+            Blokje GEdge8 = lstBlokjes.Find(z => z.AdresBlokje == "FrontMiddleDown");
+            int GEdge8i = lstBlokjes.IndexOf(GEdge8);
+            Blokje GCorner9 = lstBlokjes.Find(z => z.AdresBlokje == "FrontRightDown");
+            int GCorner9i = lstBlokjes.IndexOf(GCorner9);
+
+            //Red - Right
+            Blokje RCorner7 = lstBlokjes.Find(z => z.AdresBlokje == "RightLeftDown");
+            int RCorner7i = lstBlokjes.IndexOf(RCorner7);
+            Blokje REdge8 = lstBlokjes.Find(z => z.AdresBlokje == "RightMiddleDown");
+            int REdge8i = lstBlokjes.IndexOf(REdge8);
+            Blokje RCorner9 = lstBlokjes.Find(z => z.AdresBlokje == "RightRightDown");
+            int RCorner9i = lstBlokjes.IndexOf(RCorner9);
+
+            //Blue - back
+            Blokje BCorner7 = lstBlokjes.Find(z => z.AdresBlokje == "BackLeftDown");
+            int BCorner7i = lstBlokjes.IndexOf(BCorner7);
+            Blokje BEdge8 = lstBlokjes.Find(z => z.AdresBlokje == "BackMiddleDown");
+            int BEdge8i = lstBlokjes.IndexOf(BEdge8);
+            Blokje BCorner9 = lstBlokjes.Find(z => z.AdresBlokje == "BackRightDown");
+            int BCorner9i = lstBlokjes.IndexOf(BCorner9);
+
+            //Orange - Left
+            Blokje OCorner7 = lstBlokjes.Find(z => z.AdresBlokje == "LeftLeftDown");
+            int OCorner7i = lstBlokjes.IndexOf(OCorner7);
+            Blokje OEdge8 = lstBlokjes.Find(z => z.AdresBlokje == "LeftMiddleDown");
+            int OEdge8i = lstBlokjes.IndexOf(OEdge8);
+            Blokje OCorner9 = lstBlokjes.Find(z => z.AdresBlokje == "LeftRightDown");
+            int OCorner9i = lstBlokjes.IndexOf(OCorner9);
+
+            #endregion
+
+            if (!isPrime)
+            {
+                //Met de klok mee
+                #region Processing D
+
+                //Geel vlak draaien
+                //Corners
+                string onthoud = YCorner1.AdresBlokje;
+                YCorner1.AdresBlokje = YCorner3.AdresBlokje;
+                YCorner3.AdresBlokje = YCorner9.AdresBlokje;
+                YCorner9.AdresBlokje = YCorner7.AdresBlokje;
+                YCorner7.AdresBlokje = onthoud; //Waarde BCorner9 veranderd hier??
+
+                //Edge
+                onthoud = YEdge2.AdresBlokje;
+                YEdge2.AdresBlokje = YEdge6.AdresBlokje;
+                YEdge6.AdresBlokje = YEdge8.AdresBlokje;
+                YEdge8.AdresBlokje = YEdge4.AdresBlokje;
+                YEdge4.AdresBlokje = onthoud; // waarde BEdge veranderd hier??
+
+                //Zijkanten
+                //Corner links
+                onthoud = RCorner7.AdresBlokje;
+                RCorner7.AdresBlokje = BCorner7.AdresBlokje;
+                BCorner7.AdresBlokje = OCorner7.AdresBlokje;
+                OCorner7.AdresBlokje = GCorner7.AdresBlokje;
+                GCorner7.AdresBlokje = onthoud;
+
+                //Corner rechts
+                onthoud = RCorner9.AdresBlokje;
+                RCorner9.AdresBlokje = BCorner9.AdresBlokje;
+                BCorner9.AdresBlokje = OCorner9.AdresBlokje;
+                OCorner9.AdresBlokje = GCorner9.AdresBlokje;
+                GCorner9.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = REdge8.AdresBlokje;
+                REdge8.AdresBlokje = BEdge8.AdresBlokje;
+                BEdge8.AdresBlokje = OEdge8.AdresBlokje;
+                OEdge8.AdresBlokje = GEdge8.AdresBlokje;
+                GEdge8.AdresBlokje = onthoud;
+                #endregion
+            }
+            else
+            {
+                //Tegen de klok in
+                #region Processing D'
+
+                //Geel vlak draaien
+                //Corners
+                string onthoud = YCorner1.AdresBlokje;
+                YCorner1.AdresBlokje = YCorner7.AdresBlokje;
+                YCorner7.AdresBlokje = YCorner9.AdresBlokje;
+                YCorner9.AdresBlokje = YCorner3.AdresBlokje;
+                YCorner3.AdresBlokje = onthoud;
+
+                //Edges
+                onthoud = YEdge2.AdresBlokje;
+                YEdge2.AdresBlokje = YEdge4.AdresBlokje;
+                YEdge4.AdresBlokje = YEdge8.AdresBlokje;
+                YEdge8.AdresBlokje = YEdge6.AdresBlokje;
+                YEdge6.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Corner Rechts
+                onthoud = GCorner7.AdresBlokje;
+                GCorner7.AdresBlokje = OCorner7.AdresBlokje;
+                OCorner7.AdresBlokje = BCorner7.AdresBlokje;
+                BCorner7.AdresBlokje = RCorner7.AdresBlokje;
+                RCorner7.AdresBlokje = onthoud;
+
+                //Corner Links
+                onthoud = GCorner9.AdresBlokje;
+                GCorner9.AdresBlokje = OCorner9.AdresBlokje;
+                OCorner9.AdresBlokje = BCorner9.AdresBlokje;
+                BCorner9.AdresBlokje = RCorner9.AdresBlokje;
+                RCorner9.AdresBlokje = onthoud;
+
+                //Edges
+                onthoud = GEdge8.AdresBlokje;
+                GEdge8.AdresBlokje = OEdge8.AdresBlokje;
+                OEdge8.AdresBlokje = BEdge8.AdresBlokje;
+                BEdge8.AdresBlokje = REdge8.AdresBlokje;
+                REdge8.AdresBlokje = onthoud;
+
+                #endregion
+            }
+
+            //Maken van lijst voor de output
+            #region List Maken
+
+            lstBlokjes[YCorner1i] = YCorner1;
+            lstBlokjes[YEdge2i] = YEdge2;
+            lstBlokjes[YCorner3i] = YCorner3;
+            lstBlokjes[YEdge4i] = YEdge4;
+            lstBlokjes[YEdge6i] = YEdge6;
+            lstBlokjes[YCorner7i] = YCorner7;
+            lstBlokjes[YEdge8i] = YEdge8;
+            lstBlokjes[YCorner9i] = YCorner9;
+            lstBlokjes[OCorner7i] = OCorner7;
+            lstBlokjes[OEdge8i] = OEdge8;
+            lstBlokjes[OCorner9i] = OCorner9;
+            lstBlokjes[RCorner7i] = RCorner7;
+            lstBlokjes[REdge8i] = REdge8;
+            lstBlokjes[RCorner9i] = RCorner9;
+            lstBlokjes[GCorner7i] = GCorner7;
+            lstBlokjes[GEdge8i] = GEdge8;
+            lstBlokjes[GCorner9i] = GCorner9;
+            lstBlokjes[BCorner7i] = BCorner7;
+            lstBlokjes[BEdge8i] = BEdge8;
+            lstBlokjes[BCorner9i] = BCorner9;
+
+            #endregion
+
+            return lstBlokjes;
+        }
 
         /// <summary>
-        /// Draaien van de voorste laag
+        /// Draaien van de voorste zijde
         /// </summary>
         /// <param name="lstBlokjes">lijst met blokjes</param>
         /// <param name="isPrime">Indien tegen de klok draaien 'true'</param>
         /// <returns>Aangepaste lijst</returns>
         public static List<Blokje> F(List<Blokje> lstBlokjes, bool isPrime)
         {
+            //Al de draaiende blokjes vand de F laag
             #region Input
 
             //Front Vlak - GREEN
@@ -264,6 +444,7 @@ namespace GIPKubusProject
 
             if (!isPrime)
             {
+                //Met de klok mee
                 #region Processing F
                 //Groen Vlak draaien
                 //Corners - GREEN
@@ -306,6 +487,7 @@ namespace GIPKubusProject
             }
             else
             {
+                //Tegen de klok in
                 #region Processing F'
                 //Groen Vlak draaien
                 //Corners
@@ -347,6 +529,7 @@ namespace GIPKubusProject
                 #endregion
             }
 
+            //Maken van lijst voor de output
             #region List Maken
 
             lstBlokjes[GCorner1i] = GCorner1;
@@ -376,179 +559,155 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
+        #endregion
+
+        public static List<Blokje> R(List<Blokje> lstBlokjes, bool isPrime)
+        {
+            #region Input
+
+            //Rood - RECHTS
+            Blokje RCorner1 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftUp");
+            int RCorner1i = lstBlokjes.IndexOf(RCorner1);
+            Blokje REdge2 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftMiddle");
+            int REdge2i = lstBlokjes.IndexOf(REdge2);
+            Blokje RCorner3 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftDown");
+            int RCorner3i = lstBlokjes.IndexOf(RCorner3);
+            Blokje REdge4 = lstBlokjes.Find(r => r.AdresBlokje == "RightMiddleUp");
+            int REdge4i = lstBlokjes.IndexOf(REdge4);
+            Blokje REdge6 = lstBlokjes.Find(r => r.AdresBlokje == "RightMiddleDown");
+            int REdge6i = lstBlokjes.IndexOf(REdge6);
+            Blokje RCorner7 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightUp");
+            int RCorner7i = lstBlokjes.IndexOf(RCorner7);
+            Blokje REdge8 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightMiddle");
+            int REdge8i = lstBlokjes.IndexOf(REdge8);
+            Blokje RCorner9 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightDown");
+            int RCorner9i = lstBlokjes.IndexOf(RCorner9);
+
+            //Wit - UP
+            Blokje WCorner3 = lstBlokjes.Find(r => r.AdresBlokje == "UpRightUp");
+            int WCorner3i = lstBlokjes.IndexOf(WCorner3);
+            Blokje WEdge6 = lstBlokjes.Find(r => r.AdresBlokje == "UpRightMiddle");
+            int WEdge6i = lstBlokjes.IndexOf(WEdge6);
+            Blokje WCorner9 = lstBlokjes.Find(r => r.AdresBlokje == "UpRightDown");
+            int WCorner9i = lstBlokjes.IndexOf(WCorner9);
+
+            //Blue - BACK
+            Blokje BCorner1 = lstBlokjes.Find(r => r.AdresBlokje == "BackLeftUp");
+            int BCorner1i = lstBlokjes.IndexOf(BCorner1);
+            Blokje BEdge4 = lstBlokjes.Find(r => r.AdresBlokje == "BackLeftMiddle");
+            int BEdge4i = lstBlokjes.IndexOf(BEdge4);
+            Blokje BCorner7 = lstBlokjes.Find(r => r.AdresBlokje == "BackLeftDown");
+            int BCorner7i = lstBlokjes.IndexOf(BCorner7);
+
+            //Yellow - DOWN
+            Blokje YCorner3 = lstBlokjes.Find(r => r.AdresBlokje == "DownRightUp");
+            int YCorner3i = lstBlokjes.IndexOf(YCorner3);
+            Blokje YEdge6 = lstBlokjes.Find(r => r.AdresBlokje == "DownRightMiddle");
+            int YEdge6i = lstBlokjes.IndexOf(YEdge6);
+            Blokje YCorner9 = lstBlokjes.Find(r => r.AdresBlokje == "DownRightDown");
+            int YCorner9i = lstBlokjes.IndexOf(YCorner9);
+
+            //Green - FRONT
+            Blokje GCorner3 = lstBlokjes.Find(r => r.AdresBlokje == "FrontRightUp");
+            int GCorner3i = lstBlokjes.IndexOf(GCorner3);
+            Blokje GEdge6 = lstBlokjes.Find(r => r.AdresBlokje == "FrontRightMiddle");
+            int GEdge6i = lstBlokjes.IndexOf(GEdge6);
+            Blokje GCorner9 = lstBlokjes.Find(r => r.AdresBlokje == "FrontRightDown");
+            int GCorner9i = lstBlokjes.IndexOf(GCorner9);
+
+            #endregion
+
+            if (!isPrime)
+            {
+                //Draaien met de klok mee
+                #region Processing R
+
+                //Rood vlak draaien
+                //Corners
+                string onthoud = RCorner1.AdresBlokje;
+                RCorner1.AdresBlokje = RCorner3.AdresBlokje;
+                RCorner3.AdresBlokje = RCorner9.AdresBlokje;
+                RCorner9.AdresBlokje = RCorner7.AdresBlokje;
+                RCorner7.AdresBlokje = onthoud;
+
+                //Edges
+                onthoud = REdge2.AdresBlokje;
+                REdge2.AdresBlokje = REdge6.AdresBlokje;
+                REdge6.AdresBlokje = REdge8.AdresBlokje;
+                REdge8.AdresBlokje = REdge4.AdresBlokje;
+                REdge4.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Corner Boven
+                onthoud = GCorner3.AdresBlokje;
+                GCorner3.AdresBlokje = WCorner3.AdresBlokje;
+                WCorner3.AdresBlokje = BCorner1.AdresBlokje;
+                BCorner1.AdresBlokje = YCorner3.AdresBlokje;
+                YCorner3.AdresBlokje = onthoud;
+
+                //Corner Onder
+                onthoud = GCorner9.AdresBlokje;
+                GCorner9.AdresBlokje = WCorner9.AdresBlokje;
+                WCorner9.AdresBlokje = BCorner7.AdresBlokje;
+                BCorner7.AdresBlokje = YCorner9.AdresBlokje;
+                YCorner9.AdresBlokje = onthoud;
+
+                //Edges
+                onthoud = GEdge6.AdresBlokje;
+                GEdge6.AdresBlokje = WEdge6.AdresBlokje;
+                WEdge6.AdresBlokje = BEdge4.AdresBlokje;
+                BEdge4.AdresBlokje = YEdge6.AdresBlokje;
+                YEdge6.AdresBlokje = onthoud;
+
+                #endregion
+            }
+            else
+            {
+                //Draaien tegen de klok in
+                #region Processing R'
+
+                #endregion
+            }
+
+            #region Lijst Maken
+
+            lstBlokjes[RCorner1i] = RCorner1;
+            lstBlokjes[REdge2i] = REdge2;
+            lstBlokjes[RCorner3i] = RCorner3;
+            lstBlokjes[REdge4i] = REdge4;
+            lstBlokjes[REdge6i] = REdge6;
+            lstBlokjes[RCorner7i] = RCorner7;
+            lstBlokjes[REdge8i] = REdge8;
+            lstBlokjes[RCorner9i] = RCorner9;
+            lstBlokjes[WCorner3i] = WCorner3;
+            lstBlokjes[WEdge6i] = WEdge6;
+            lstBlokjes[WCorner9i] = WCorner9;
+            lstBlokjes[BCorner1i] = BCorner1;
+            lstBlokjes[BEdge4i] = BEdge4;
+            lstBlokjes[BCorner7i] = BCorner7;
+            lstBlokjes[YCorner3i] = YCorner3;
+            lstBlokjes[YEdge6i] = YEdge6;
+            lstBlokjes[YCorner9i] = YCorner9;
+            lstBlokjes[GCorner3i] = GCorner3;
+            lstBlokjes[GEdge6i] = GEdge6;
+            lstBlokjes[GCorner9i] = GCorner9;
+
+            #endregion
+
+            return lstBlokjes;
+        }
+
+
+
+
         /*public static List<Blokje> B()
         {
 
         }*/
-
-        /*public static List<Blokje> R()
-        {
-
-        }*/
-
         /*public static List<Blokje> L()
         {
             
         }*/
-
-        #endregion
-
-        #region Prime
-
-        /*public static List<Blokje> UPrime(List<Blokje> lstBlokjes)
-        {
-            #region Input
-
-            //WIT
-            Blokje WCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "UpLeftUp");
-            int WCorner1i = lstBlokjes.IndexOf(WCorner1);
-            Blokje WEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "UpMiddleUp");
-            int WEdge2i = lstBlokjes.IndexOf(WEdge2);
-            Blokje WCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "UpRightUp");
-            int WCorner3i = lstBlokjes.IndexOf(WCorner3);
-            Blokje WEdge4 = lstBlokjes.Find(x => x.AdresBlokje == "UpLeftMiddle");
-            int WEdge4i = lstBlokjes.IndexOf(WEdge4);
-            Blokje WEdge6 = lstBlokjes.Find(x => x.AdresBlokje == "UpRightMiddle");
-            int WEdge6i = lstBlokjes.IndexOf(WEdge6);
-            Blokje WCorner7 = lstBlokjes.Find(x => x.AdresBlokje == "UpLeftDown");
-            int WCorner7i = lstBlokjes.IndexOf(WCorner7);
-            Blokje WEdge8 = lstBlokjes.Find(x => x.AdresBlokje == "UpMiddleDown");
-            int WEdge8i = lstBlokjes.IndexOf(WEdge8);
-            Blokje WCorner9 = lstBlokjes.Find(x => x.AdresBlokje == "UpRightDown");
-            int WCorner9i = lstBlokjes.IndexOf(WCorner9);
-
-
-            //BLAUW
-            Blokje BCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "BackLeftUp");
-            int BCorner1i = lstBlokjes.IndexOf(BCorner1);
-            Blokje BEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "BackMiddleUp");
-            int BEdge2i = lstBlokjes.IndexOf(BEdge2);
-            Blokje BCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "BackRightUp");
-            int BCorner3i = lstBlokjes.IndexOf(BCorner3);
-
-
-            //ROOD
-            Blokje RCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "RightLeftUp");
-            int RCorner1i = lstBlokjes.IndexOf(RCorner1);
-            Blokje REdge2 = lstBlokjes.Find(x => x.AdresBlokje == "RightMiddleUp");
-            int REdge2i = lstBlokjes.IndexOf(REdge2);
-            Blokje RCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "RightRightUp");
-            int RCorner3i = lstBlokjes.IndexOf(RCorner3);
-
-
-            //GROEN
-            Blokje GEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "FrontLeftUp");
-            int GEdge2i = lstBlokjes.IndexOf(GEdge2);
-            Blokje GCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "FrontMiddelUp");
-            int GCorner3i = lstBlokjes.IndexOf(GCorner3);
-            Blokje GCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "FrontRightUp");
-            int GCorner1i = lstBlokjes.IndexOf(GCorner1);
-
-
-            //ORANJE
-            Blokje OCorner1 = lstBlokjes.Find(x => x.AdresBlokje == "LeftLeftUp");
-            int OCorner1i = lstBlokjes.IndexOf(OCorner1);
-            Blokje OEdge2 = lstBlokjes.Find(x => x.AdresBlokje == "LeftMiddleUp");
-            int OEdge2i = lstBlokjes.IndexOf(OEdge2);
-            Blokje OCorner3 = lstBlokjes.Find(x => x.AdresBlokje == "LeftRightUp");
-            int OCorner3i = lstBlokjes.IndexOf(OCorner3);
-
-            #endregion
-
-            #region Processing
-
-            //WIT VLAK DRAAIEN
-            //Corners
-            string onthoud = WCorner1.AdresBlokje;
-            WCorner1.AdresBlokje = WCorner7.AdresBlokje;
-            WCorner7.AdresBlokje = WCorner9.AdresBlokje;
-            WCorner9.AdresBlokje = WCorner3.AdresBlokje;
-            WCorner3.AdresBlokje = onthoud;
-
-            //Edges
-
-            onthoud = WEdge2.AdresBlokje;
-            WEdge2.AdresBlokje = WEdge4.AdresBlokje;
-            WEdge4.AdresBlokje = WEdge8.AdresBlokje;
-            WEdge8.AdresBlokje = WEdge6.AdresBlokje;
-            WEdge6.AdresBlokje = onthoud;
-
-            //ZIJKANTEN
-            //Corner 1
-            onthoud = GCorner1.AdresBlokje;
-            GCorner1.AdresBlokje = RCorner1.AdresBlokje;
-            RCorner1.AdresBlokje = BCorner1.AdresBlokje;
-            BCorner1.AdresBlokje = OCorner1.AdresBlokje;
-            OCorner1.AdresBlokje = onthoud;
-
-            //Corner 3
-            onthoud = GCorner3.AdresBlokje;
-            GCorner3.AdresBlokje = RCorner3.AdresBlokje;
-            RCorner3.AdresBlokje = BCorner3.AdresBlokje;
-            BCorner3.AdresBlokje = OCorner3.AdresBlokje;
-            OCorner3.AdresBlokje = onthoud;
-
-            //Edge
-            onthoud = GEdge2.AdresBlokje;
-            GEdge2.AdresBlokje = REdge2.AdresBlokje;
-            REdge2.AdresBlokje = BEdge2.AdresBlokje;
-            BEdge2.AdresBlokje = OEdge2.AdresBlokje;
-            OEdge2.AdresBlokje = onthoud;
-
-            //List aanpassen
-            lstBlokjes[WCorner1i] = WCorner1;
-            lstBlokjes[WEdge2i] = WEdge2;
-            lstBlokjes[WCorner3i] = WCorner3;
-            lstBlokjes[WEdge4i] = WEdge4;
-            lstBlokjes[WEdge6i] = WEdge6;
-            lstBlokjes[WCorner7i] = WCorner7;
-            lstBlokjes[WEdge8i] = WEdge8;
-            lstBlokjes[WCorner9i] = WCorner9;
-            lstBlokjes[BCorner1i] = BCorner1;
-            lstBlokjes[BEdge2i] = BEdge2;
-            lstBlokjes[BCorner3i] = BCorner3;
-            lstBlokjes[RCorner1i] = RCorner1;
-            lstBlokjes[REdge2i] = REdge2;
-            lstBlokjes[RCorner3i] = RCorner3;
-            lstBlokjes[GCorner1i] = GCorner1;
-            lstBlokjes[GEdge2i] = GEdge2;
-            lstBlokjes[GCorner3i] = GCorner3;
-            lstBlokjes[OCorner1i] = OCorner1;
-            lstBlokjes[OEdge2i] = OEdge2;
-            lstBlokjes[OCorner3i] = OCorner3;
-
-            #endregion
-
-            ///Output
-            return lstBlokjes;
-        }*/
-
-        /*public static List<Blokje> DPrime()
-        {
-
-        }*/
-
-        /*public static List<Blokje> FPrime()
-        {
-
-        }*/
-
-        /*public static List<Blokje> BPrime()
-        {
-
-        }*/
-
-        /*public static List<Blokje> RPrime()
-        {
-
-        }*/
-
-        /*public static List<Blokje> LPrime()
-        {
-
-        }*/
-
-        #endregion
     }
 }
 

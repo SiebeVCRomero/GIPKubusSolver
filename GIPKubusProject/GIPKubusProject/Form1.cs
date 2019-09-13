@@ -60,7 +60,7 @@ namespace GIPKubusProject
                 YCorner1 = new Blokje("YCorner1", "DownLeftUp"),
                 YEdge2 = new Blokje("YEdge2", "DownMiddleUp"),
                 YCorner3 = new Blokje("YCorner3", "DownRightUp"),
-                YEdge4 = new Blokje("YEdge4", "DownLeftMIddle"),
+                YEdge4 = new Blokje("YEdge4", "DownLeftMiddle"),
                 YCenter = new Blokje("YCenter", "DownPanel"),
                 YEdge6 = new Blokje("YEdge6", "DownRightMiddle"),
                 YCorner7 = new Blokje("YCorner7", "DownLeftDown"),
@@ -77,26 +77,12 @@ namespace GIPKubusProject
                 OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
                 OCorner9 = new Blokje("OCorner9", "LeftRightDown");
 
-        #endregion
+        
 
-        private void FrontPrime_Click(object sender, EventArgs e)
-        {
-            Colorer(Turns.F(AlleBlokjes, true));
-        }
-
-        private void Front_Click(object sender, EventArgs e)
-        {
-            Colorer(Turns.F(AlleBlokjes, false));
-        }
-
-        private void UpPrime_Click(object sender, EventArgs e)
-        {
-            Colorer(Turns.U(AlleBlokjes, true));
-        }
 
 
         /// <summary>
-        /// vult de list "AlleBlokjes" in
+        /// Vult de lijst in
         /// </summary>
         public void ListMaker()
         {
@@ -156,6 +142,52 @@ namespace GIPKubusProject
             AlleBlokjes.Add(OCorner9);
         }
 
+        #endregion
+
+        //Al de turns via de buttons
+        #region Turns
+        private void Up_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.U(AlleBlokjes, false));
+        }
+
+        private void Down_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.D(AlleBlokjes, false));
+        }
+        private void DownPrime_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.D(AlleBlokjes, true));
+        }
+
+        private void FrontPrime_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.F(AlleBlokjes, true));
+        }
+
+        private void Front_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.F(AlleBlokjes, false));
+        }
+
+        private void UpPrime_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.U(AlleBlokjes, true));
+        }
+
+        private void Right_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.R(AlleBlokjes, false));
+        }
+
+        #endregion
+
+        public void KubusSolverForm_Load(object sender, EventArgs e)
+        {
+            ListMaker();
+            Colorer(AlleBlokjes);
+        }
+
         /// <summary>
         /// Kleurt de kubus volgens de list
         /// </summary>
@@ -210,7 +242,7 @@ namespace GIPKubusProject
             DownLeftUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownLeftUp").KleurBlokje;
             DownMiddleUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownMiddleUp").KleurBlokje;
             DownRightUp.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownRightUp").KleurBlokje;
-            DownLeftMIddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownLeftMIddle").KleurBlokje;
+            DownLeftMIddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownLeftMiddle").KleurBlokje;
             DownPanel.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownPanel").KleurBlokje;
             DownRightMiddle.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownRightMiddle").KleurBlokje;
             DownLeftDown.BackColor = lijstBlokjes.Find(c => c.AdresBlokje == "DownLeftDown").KleurBlokje;
@@ -231,17 +263,6 @@ namespace GIPKubusProject
         public KubusSolverForm()
         {
             InitializeComponent();
-        }
-
-        public void KubusSolverForm_Load(object sender, EventArgs e)
-        {
-            ListMaker();
-            Colorer(AlleBlokjes);
-        }
-
-        private void Up_Click(object sender, EventArgs e)
-        {
-            Colorer(Turns.U(AlleBlokjes, false));
         }
     }
 }

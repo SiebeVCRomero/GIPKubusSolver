@@ -493,6 +493,7 @@
             this.Down.TabIndex = 52;
             this.Down.Text = "D";
             this.Down.UseVisualStyleBackColor = false;
+            this.Down.Click += new System.EventHandler(this.Down_Click);
             // 
             // DownPrime
             // 
@@ -505,6 +506,7 @@
             this.DownPrime.TabIndex = 53;
             this.DownPrime.Text = "D\'";
             this.DownPrime.UseVisualStyleBackColor = false;
+            this.DownPrime.Click += new System.EventHandler(this.DownPrime_Click);
             // 
             // BackPrime
             // 
@@ -603,6 +605,7 @@
             this.Right.TabIndex = 58;
             this.Right.Text = "R";
             this.Right.UseVisualStyleBackColor = false;
+            this.Right.Click += new System.EventHandler(this.Right_Click);
             // 
             // FrontRightDown
             // 
