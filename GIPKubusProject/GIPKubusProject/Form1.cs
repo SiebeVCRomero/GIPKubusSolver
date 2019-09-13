@@ -77,9 +77,6 @@ namespace GIPKubusProject
                 OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
                 OCorner9 = new Blokje("OCorner9", "LeftRightDown");
 
-        
-
-
 
         /// <summary>
         /// Vult de lijst in
@@ -178,6 +175,11 @@ namespace GIPKubusProject
         private void Right_Click(object sender, EventArgs e)
         {
             Colorer(Turns.R(AlleBlokjes, false));
+        }
+
+        private void RightPrime_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.R(AlleBlokjes, true));
         }
 
         #endregion

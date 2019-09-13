@@ -559,8 +559,12 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
-        #endregion
-
+        /// <summary>
+        /// Draaien van de rechterzijde
+        /// </summary>
+        /// <param name="lstBlokjes">Lijst met blokjes</param>
+        /// <param name="isPrime">True indie tegen de klok draaien</param>
+        /// <returns></returns>
         public static List<Blokje> R(List<Blokje> lstBlokjes, bool isPrime)
         {
             #region Input
@@ -666,6 +670,43 @@ namespace GIPKubusProject
                 //Draaien tegen de klok in
                 #region Processing R'
 
+                //Rood vlak draaien
+                //Corners
+                string onthoud = RCorner1.AdresBlokje;
+                RCorner1.AdresBlokje = RCorner7.AdresBlokje;
+                RCorner7.AdresBlokje = RCorner9.AdresBlokje;
+                RCorner9.AdresBlokje = RCorner3.AdresBlokje;
+                RCorner3.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = REdge2.AdresBlokje;
+                REdge2.AdresBlokje = REdge4.AdresBlokje;
+                REdge4.AdresBlokje = REdge8.AdresBlokje;
+                REdge8.AdresBlokje = REdge6.AdresBlokje;
+                REdge6.AdresBlokje = onthoud;
+
+                //Zijkant
+                //Corner Boven
+                onthoud = GCorner3.AdresBlokje;
+                GCorner3.AdresBlokje = YCorner3.AdresBlokje;
+                YCorner3.AdresBlokje = BCorner7.AdresBlokje;
+                BCorner7.AdresBlokje = WCorner3.AdresBlokje;
+                WCorner3.AdresBlokje = onthoud;
+
+                //Corner onder
+                onthoud = GCorner9.AdresBlokje;
+                GCorner9.AdresBlokje = YCorner9.AdresBlokje;
+                YCorner9.AdresBlokje = BCorner1.AdresBlokje;
+                BCorner1.AdresBlokje = WCorner9.AdresBlokje;
+                WCorner9.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = GEdge6.AdresBlokje;
+                GEdge6.AdresBlokje = YEdge6.AdresBlokje;
+                YEdge6.AdresBlokje = BEdge4.AdresBlokje;
+                BEdge4.AdresBlokje = WEdge6.AdresBlokje;
+                WEdge6.AdresBlokje = onthoud;
+
                 #endregion
             }
 
@@ -697,13 +738,32 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
+        #endregion
 
 
-
-        /*public static List<Blokje> B()
+        public static List<Blokje> B(List<Blokje> lstBlokjes, bool isPrime)
         {
+            #region Input
 
-        }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #endregion
+
+        }
+
+
+
         /*public static List<Blokje> L()
         {
             

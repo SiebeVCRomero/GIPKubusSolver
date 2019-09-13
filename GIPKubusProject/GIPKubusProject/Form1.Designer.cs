@@ -593,6 +593,7 @@
             this.RightPrime.TabIndex = 59;
             this.RightPrime.Text = "R\'";
             this.RightPrime.UseVisualStyleBackColor = false;
+            this.RightPrime.Click += new System.EventHandler(this.RightPrime_Click);
             // 
             // Right
             // 
