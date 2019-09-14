@@ -738,9 +738,12 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
-        #endregion
-
-
+        /// <summary>
+        /// Draaien van de achterste laag
+        /// </summary>
+        /// <param name="lstBlokjes">Lijst let blokjes</param>
+        /// <param name="isPrime">True indien draaien tegen de klok</param>
+        /// <returns></returns>
         public static List<Blokje> B(List<Blokje> lstBlokjes, bool isPrime)
         {
             #region Input
@@ -910,12 +913,102 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
+        #endregion
 
 
-        /*public static List<Blokje> L()
+        public static List<Blokje> L(List<Blokje> lstBlokjes, bool isPrime)
         {
-            
-        }*/
+            #region Input
+            //Orange - LEFT
+            Blokje OCorner1 = lstBlokjes.Find(o => o.AdresBlokje == "LeftLeftUp");
+            int OCorner1i = lstBlokjes.IndexOf(OCorner1);
+            Blokje OEdge2 = lstBlokjes.Find(o => o.AdresBlokje == "LeftMiddleUp");
+            int OEdge2i = lstBlokjes.IndexOf(OEdge2);
+            Blokje OCorner3 = lstBlokjes.Find(o => o.AdresBlokje == "LeftRightUp");
+            int OCorner3i = lstBlokjes.IndexOf(OCorner3);
+            Blokje OEdge4 = lstBlokjes.Find(o => o.AdresBlokje == "LeftLeftMiddle");
+            int OEdge4i = lstBlokjes.IndexOf(OEdge4);
+            Blokje OEdge6 = lstBlokjes.Find(o => o.AdresBlokje == "LeftRightMiddle");
+            int OEdge6i = lstBlokjes.IndexOf(OEdge6);
+            Blokje OCorner7 = lstBlokjes.Find(o => o.AdresBlokje == "LeftLeftDown");
+            int OCorner7i = lstBlokjes.IndexOf(OCorner7);
+            Blokje OEdge8 = lstBlokjes.Find(o => o.AdresBlokje == "LeftMiddleDown");
+            int OEdge8i = lstBlokjes.IndexOf(OEdge8);
+            Blokje OCorner9 = lstBlokjes.Find(o => o.AdresBlokje == "LeftRightDown");
+            int OCorner9i = lstBlokjes.IndexOf(OCorner9);
+
+            //Yellow - DOWN
+            Blokje YCorner1 = lstBlokjes.Find(o => o.AdresBlokje == "DownLeftUp");
+            int YCorner1i = lstBlokjes.IndexOf(YCorner1);
+            Blokje YEdge4 = lstBlokjes.Find(o => o.AdresBlokje == "DownLeftMiddle");
+            int YEdge4i = lstBlokjes.IndexOf(YEdge4);
+            Blokje YCorner7 = lstBlokjes.Find(o => o.AdresBlokje == "DownLeftDown");
+            int YCorner7i = lstBlokjes.IndexOf(YCorner7);
+
+            //Green - FRONT
+            Blokje GCorner1 = lstBlokjes.Find(o => o.AdresBlokje == "FrontLeftUp");
+            int GCorner1i = lstBlokjes.IndexOf(GCorner1);
+            Blokje GEdge4 = lstBlokjes.Find(o => o.AdresBlokje == "FrontLeftMiddle");
+            int GEdge4i = lstBlokjes.IndexOf(GEdge4);
+            Blokje GCorner7 = lstBlokjes.Find(o => o.AdresBlokje == "FrontLeftDown");
+            int GCorner7i = lstBlokjes.IndexOf(GCorner7);
+
+            //White - UP
+            Blokje WCorner1 = lstBlokjes.Find(o => o.AdresBlokje == "UpLeftUp");
+            int WCorner1i = lstBlokjes.IndexOf(WCorner1);
+            Blokje WEdge4 = lstBlokjes.Find(o => o.AdresBlokje == "UpLeftMiddle");
+            int WEdge4i = lstBlokjes.IndexOf(WEdge4);
+            Blokje WCorner7= lstBlokjes.Find(o => o.AdresBlokje == "UpLeftDown");
+            int WCorner7i = lstBlokjes.IndexOf(WCorner7);
+
+            //Blue - BACK
+            Blokje BCorner3 = lstBlokjes.Find(o => o.AdresBlokje == "BackRightUp");
+            int BCorner3i = lstBlokjes.IndexOf(BCorner3);
+            Blokje BEdge6 = lstBlokjes.Find(o => o.AdresBlokje == "BackRightMiddle");
+            int BEdge6i = lstBlokjes.IndexOf(BEdge6);
+            Blokje BCorner9 = lstBlokjes.Find(o => o.AdresBlokje == "BackRightDown");
+            int BCorner9i = lstBlokjes.IndexOf(BCorner9);
+
+            #endregion
+
+            if (!isPrime)
+            {
+                #region Processing L
+
+                #endregion
+            }
+            else
+            {
+                #region Processing L'
+
+                #endregion
+            }
+
+            #region List Maken
+
+            lstBlokjes[OCorner1i] = OCorner1;
+            lstBlokjes[OEdge2i] = OEdge2;
+            lstBlokjes[OCorner3i] = OCorner3;
+            lstBlokjes[OEdge4i] = OEdge4;
+            lstBlokjes[OEdge6i] = OEdge6;
+            lstBlokjes[OCorner7i] = OCorner7;
+            lstBlokjes[OEdge8i] = OEdge8;
+            lstBlokjes[OCorner9i] = OCorner9;
+            lstBlokjes[YCorner1i] = YCorner1;
+            lstBlokjes[YEdge4i] = YEdge4;
+            lstBlokjes[YCorner7i] = YCorner7;
+            lstBlokjes[GCorner1i] = GCorner1;
+            lstBlokjes[GEdge4i] = GEdge4;
+            lstBlokjes[GCorner7i] = GCorner7;
+            lstBlokjes[WCorner1i] = WCorner1;
+            lstBlokjes[WEdge4i] = WEdge4;
+            lstBlokjes[WCorner7i] = WCorner7;
+            lstBlokjes[BCorner3i] = BCorner3;
+            lstBlokjes[BEdge6i] = BEdge6;
+            lstBlokjes[BCorner9i] = BCorner9;
+
+            #endregion
+        }
     }
 }
 
