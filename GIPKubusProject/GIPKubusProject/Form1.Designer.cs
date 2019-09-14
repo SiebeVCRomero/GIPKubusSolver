@@ -133,6 +133,8 @@
             // UpPanel
             // 
             this.UpPanel.BackColor = System.Drawing.Color.White;
+            this.UpPanel.BackgroundImage = global::GIPKubusProject.Properties.Resources.Logo;
+            this.UpPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.UpPanel.Location = new System.Drawing.Point(666, 195);
             this.UpPanel.Name = "UpPanel";
             this.UpPanel.Size = new System.Drawing.Size(45, 45);

@@ -12,6 +12,7 @@ namespace GIPKubusProject
 {
     public partial class KubusSolverForm : System.Windows.Forms.Form
     {
+        private static System.Timers.Timer aTimer;
         //Al het genereren van de blokjes en de lijst voor de parameters van de funties (Turns)
         #region Blokjes + Lijst
 
@@ -79,13 +80,55 @@ namespace GIPKubusProject
 
         private void Scramble_Click(object sender, EventArgs e)
         {
-            foreach (int item in Scrambler.Scramble(15))
+            foreach (int getal in Scrambler.Scramble(15))
             {
+                switch (getal)
+                {
+                    case 2:
+                        Colorer(Turns.U(AlleBlokjes, true));
+                        break;
+                    case 3:
+                        Colorer(Turns.D(AlleBlokjes, false));
+                        break;
+                    case 4:
+                        Colorer(Turns.D(AlleBlokjes, true));
+                        break;
+                    case 5:
+                        Colorer(Turns.F(AlleBlokjes, false));
+                        break;
+                    case 6:
+                        Colorer(Turns.F(AlleBlokjes, true));
+                        break;
+                    case 7:
+                        Colorer(Turns.B(AlleBlokjes, false));
+                        break;
+                    case 8:
+                        Colorer(Turns.B(AlleBlokjes, true));
+                        break;
+                    case 9:
+                        Colorer(Turns.L(AlleBlokjes, false));
+                        break;
+                    case 10:
+                        Colorer(Turns.L(AlleBlokjes, true));
+                        aTimer.Start();
+                        break;
+                    case 11:
+                        Colorer(Turns.R(AlleBlokjes, false));
+                        aTimer.Start();
+                        break;
+                    case 12:
+                        Colorer(Turns.R(AlleBlokjes, true));
+                        aTimer.Start();
+                        break;
 
+                    default: //1
+                        Colorer(Turns.U(AlleBlokjes, false));
+                        aTimer.Start();
+                        break;
+                }
+                aTimer.Start();
             }
-            ;
         }
-
 
 
         /// <summary>
@@ -217,6 +260,7 @@ namespace GIPKubusProject
 
         public void KubusSolverForm_Load(object sender, EventArgs e)
         {
+            SetTimer();
             ListMaker();
             Colorer(AlleBlokjes);
         }
@@ -296,6 +340,13 @@ namespace GIPKubusProject
         public KubusSolverForm()
         {
             InitializeComponent();
+        }
+        private static void SetTimer()
+        {
+            // Create a timer with a two second interval.
+            aTimer = new System.Timers.Timer(2);
+            // Hook up the Elapsed event for the timer. 
+            aTimer.AutoReset = true;
         }
     }
 }
