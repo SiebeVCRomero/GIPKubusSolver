@@ -572,17 +572,17 @@ namespace GIPKubusProject
             //Rood - RECHTS
             Blokje RCorner1 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftUp");
             int RCorner1i = lstBlokjes.IndexOf(RCorner1);
-            Blokje REdge2 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftMiddle");
+            Blokje REdge2 = lstBlokjes.Find(r => r.AdresBlokje == "RightMiddleUp");
             int REdge2i = lstBlokjes.IndexOf(REdge2);
-            Blokje RCorner3 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftDown");
+            Blokje RCorner3 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightUp");
             int RCorner3i = lstBlokjes.IndexOf(RCorner3);
-            Blokje REdge4 = lstBlokjes.Find(r => r.AdresBlokje == "RightMiddleUp");
+            Blokje REdge4 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftMiddle");
             int REdge4i = lstBlokjes.IndexOf(REdge4);
-            Blokje REdge6 = lstBlokjes.Find(r => r.AdresBlokje == "RightMiddleDown");
+            Blokje REdge6 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightMiddle");
             int REdge6i = lstBlokjes.IndexOf(REdge6);
-            Blokje RCorner7 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightUp");
+            Blokje RCorner7 = lstBlokjes.Find(r => r.AdresBlokje == "RightLeftDown");
             int RCorner7i = lstBlokjes.IndexOf(RCorner7);
-            Blokje REdge8 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightMiddle");
+            Blokje REdge8 = lstBlokjes.Find(r => r.AdresBlokje == "RightMiddleDown");
             int REdge8i = lstBlokjes.IndexOf(REdge8);
             Blokje RCorner9 = lstBlokjes.Find(r => r.AdresBlokje == "RightRightDown");
             int RCorner9i = lstBlokjes.IndexOf(RCorner9);
@@ -800,6 +800,42 @@ namespace GIPKubusProject
             {
                 //Draaien met de klok mee
                 #region Processing B
+                //Blauw vlak draaien
+                //Corners
+                string onthoud = BCorner1.AdresBlokje;
+                BCorner1.AdresBlokje = BCorner3.AdresBlokje;
+                BCorner3.AdresBlokje = BCorner9.AdresBlokje;
+                BCorner9.AdresBlokje = BCorner7.AdresBlokje;
+                BCorner7.AdresBlokje = onthoud;
+
+                //Edges
+                onthoud = BEdge2.AdresBlokje;
+                BEdge2.AdresBlokje = BEdge6.AdresBlokje;
+                BEdge6.AdresBlokje = BEdge8.AdresBlokje;
+                BEdge8.AdresBlokje = BEdge4.AdresBlokje;
+                BEdge4.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Bovenste Corner
+                onthoud = RCorner3.AdresBlokje;
+                RCorner3.AdresBlokje = WCorner1.AdresBlokje;
+                WCorner1.AdresBlokje = OCorner7.AdresBlokje;
+                OCorner7.AdresBlokje = YCorner9.AdresBlokje;
+                YCorner9.AdresBlokje = onthoud;
+
+                //Onderste Corner
+                onthoud = RCorner9.AdresBlokje;
+                RCorner9.AdresBlokje = WCorner3.AdresBlokje;
+                WCorner3.AdresBlokje = OCorner1.AdresBlokje;
+                OCorner1.AdresBlokje = YCorner7.AdresBlokje;
+                YCorner7.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = REdge6.AdresBlokje;
+                REdge6.AdresBlokje = WEdge2.AdresBlokje;
+                WEdge2.AdresBlokje = OEdge4.AdresBlokje;
+                OEdge4.AdresBlokje = YEdge8.AdresBlokje;
+                YEdge8.AdresBlokje = onthoud;
 
                 #endregion
             }
@@ -807,7 +843,42 @@ namespace GIPKubusProject
             {
                 //Draaien tegen de klok
                 #region Processing B'
+                //Blauw vlak draaien
+                //Corners
+                string onthoud = BCorner1.AdresBlokje;
+                BCorner1.AdresBlokje = BCorner7.AdresBlokje;
+                BCorner7.AdresBlokje = BCorner9.AdresBlokje;
+                BCorner9.AdresBlokje = BCorner3.AdresBlokje;
+                BCorner3.AdresBlokje = onthoud;
 
+                //Edge
+                onthoud = BEdge2.AdresBlokje;
+                BEdge2.AdresBlokje = BEdge4.AdresBlokje;
+                BEdge4.AdresBlokje = BEdge8.AdresBlokje;
+                BEdge8.AdresBlokje = BEdge6.AdresBlokje;
+                BEdge6.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Corner boven
+                onthoud = RCorner3.AdresBlokje;
+                RCorner3.AdresBlokje = YCorner9.AdresBlokje;
+                YCorner9.AdresBlokje = OCorner7.AdresBlokje;
+                OCorner7.AdresBlokje = WCorner1.AdresBlokje;
+                WCorner1.AdresBlokje = onthoud;
+
+                //Corner onder
+                onthoud = RCorner9.AdresBlokje;
+                RCorner9.AdresBlokje = YCorner7.AdresBlokje;
+                YCorner7.AdresBlokje = OCorner1.AdresBlokje;
+                OCorner1.AdresBlokje = WCorner3.AdresBlokje;
+                WCorner3.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = REdge6.AdresBlokje;
+                REdge6.AdresBlokje = YEdge8.AdresBlokje;
+                YEdge8.AdresBlokje = OEdge4.AdresBlokje;
+                OEdge4.AdresBlokje = WEdge2.AdresBlokje;
+                WEdge2.AdresBlokje = onthoud;
                 #endregion
             }
 

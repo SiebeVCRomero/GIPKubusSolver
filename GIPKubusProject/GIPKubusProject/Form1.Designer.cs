@@ -519,6 +519,7 @@
             this.BackPrime.TabIndex = 57;
             this.BackPrime.Text = "B\'";
             this.BackPrime.UseVisualStyleBackColor = false;
+            this.BackPrime.Click += new System.EventHandler(this.BackPrime_Click);
             // 
             // Back
             // 
@@ -531,6 +532,7 @@
             this.Back.TabIndex = 56;
             this.Back.Text = "B";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // FrontPrime
             // 

@@ -31,19 +31,19 @@ namespace GIPKubusProject
             switch (naam.Substring(0,1))
             {
                 case "G":
-                    KleurBlokje = Color.Green;
+                    KleurBlokje = Color.FromArgb(11,238,50);
                     break;
 
                 case "B":
-                    KleurBlokje = Color.Blue;
+                    KleurBlokje =  Color.FromArgb(33,96,112); //Logo Kleur
                     break;
 
                 case "O":
-                    KleurBlokje = Color.Orange;
+                    KleurBlokje = Color.FromArgb(240,78,0);
                     break;
 
                 case "R":
-                    KleurBlokje = Color.Red;
+                    KleurBlokje = Color.FromArgb(173,19,19); //Logo Kleur
                     break;
 
                 case "Y":
