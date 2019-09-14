@@ -95,6 +95,7 @@
             this.FrontMiddleUp = new System.Windows.Forms.Panel();
             this.FrontLeftUp = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UpLeftUp
@@ -572,6 +573,7 @@
             this.LeftPrime.TabIndex = 61;
             this.LeftPrime.Text = "L\'";
             this.LeftPrime.UseVisualStyleBackColor = false;
+            this.LeftPrime.Click += new System.EventHandler(this.LeftPrime_Click);
             // 
             // Left
             // 
@@ -584,6 +586,7 @@
             this.Left.TabIndex = 60;
             this.Left.Text = "L";
             this.Left.UseVisualStyleBackColor = false;
+            this.Left.Click += new System.EventHandler(this.Left_Click);
             // 
             // RightPrime
             // 
@@ -692,12 +695,23 @@
             this.panel1.Size = new System.Drawing.Size(221, 146);
             this.panel1.TabIndex = 71;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(324, 680);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Scramble_Click);
+            // 
             // KubusSolverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(978, 777);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.FrontRightDown);
             this.Controls.Add(this.FrontRightMiddle);
@@ -841,6 +855,7 @@
         private System.Windows.Forms.Panel FrontMiddleUp;
         private System.Windows.Forms.Panel FrontLeftUp;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

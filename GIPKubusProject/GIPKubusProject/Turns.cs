@@ -10,13 +10,12 @@ namespace GIPKubusProject
 
     public class Turns
     {
-        #region Al gedaan
 
         /// <summary>
         /// Draaien van de bovenste zijde
         /// </summary>
         /// <param name="isPrime">True indien met de klok meedraaien</param>
-        /// <returns></returns>
+        /// <returns>Aangepaste lijst van blokjes</returns>
         public static List<Blokje> U(List<Blokje> lstBlokjes, bool isPrime)
         {
             //Al de draaiende blokjes van de U laag
@@ -203,7 +202,7 @@ namespace GIPKubusProject
         /// </summary>
         /// <param name="lstBlokjes"></param>
         /// <param name="isPrime">True indien met de klok meedraaien</param>
-        /// <returns></returns>
+        /// <returns>Aangepaste lijst van blokjes</returns>
         public static List<Blokje> D(List<Blokje> lstBlokjes, bool isPrime)
         {
             //Al de draaiende blokjes van de D laag
@@ -384,7 +383,7 @@ namespace GIPKubusProject
         /// </summary>
         /// <param name="lstBlokjes">lijst met blokjes</param>
         /// <param name="isPrime">Indien tegen de klok draaien 'true'</param>
-        /// <returns>Aangepaste lijst</returns>
+        /// <returns>Aangepaste lijst van blokjes</returns>
         public static List<Blokje> F(List<Blokje> lstBlokjes, bool isPrime)
         {
             //Al de draaiende blokjes vand de F laag
@@ -564,7 +563,7 @@ namespace GIPKubusProject
         /// </summary>
         /// <param name="lstBlokjes">Lijst met blokjes</param>
         /// <param name="isPrime">True indie tegen de klok draaien</param>
-        /// <returns></returns>
+        /// <returns>Aangepaste lijst van blokjes</returns>
         public static List<Blokje> R(List<Blokje> lstBlokjes, bool isPrime)
         {
             #region Input
@@ -743,7 +742,7 @@ namespace GIPKubusProject
         /// </summary>
         /// <param name="lstBlokjes">Lijst let blokjes</param>
         /// <param name="isPrime">True indien draaien tegen de klok</param>
-        /// <returns></returns>
+        /// <returns>Aangepaste lijst van blokjes</returns>
         public static List<Blokje> B(List<Blokje> lstBlokjes, bool isPrime)
         {
             #region Input
@@ -913,9 +912,12 @@ namespace GIPKubusProject
             return lstBlokjes;
         }
 
-        #endregion
-
-
+        /// <summary>
+        /// Draaien van de linker laag
+        /// </summary>
+        /// <param name="lstBlokjes">Lijst van blokjes</param>
+        /// <param name="isPrime">True indien tegen de klok draaien</param>
+        /// <returns>Aangepaste lijst van blokjes</returns>
         public static List<Blokje> L(List<Blokje> lstBlokjes, bool isPrime)
         {
             #region Input
@@ -975,11 +977,85 @@ namespace GIPKubusProject
             {
                 #region Processing L
 
+                //Oranje vlak draaien
+                //Corners
+                string onthoud = OCorner1.AdresBlokje;
+                OCorner1.AdresBlokje = OCorner3.AdresBlokje;
+                OCorner3.AdresBlokje = OCorner9.AdresBlokje;
+                OCorner9.AdresBlokje = OCorner7.AdresBlokje;
+                OCorner7.AdresBlokje = onthoud;
+
+                //Edges - OREEN
+                onthoud = OEdge2.AdresBlokje;
+                OEdge2.AdresBlokje = OEdge6.AdresBlokje;
+                OEdge6.AdresBlokje = OEdge8.AdresBlokje;
+                OEdge8.AdresBlokje = OEdge4.AdresBlokje;
+                OEdge4.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Corners 1
+                onthoud = GCorner1.AdresBlokje;
+                GCorner1.AdresBlokje = YCorner1.AdresBlokje;
+                YCorner1.AdresBlokje = BCorner9.AdresBlokje;
+                BCorner9.AdresBlokje = WCorner1.AdresBlokje;
+                WCorner1.AdresBlokje = onthoud;
+
+                //Corners 3
+                onthoud = GCorner7.AdresBlokje;
+                GCorner7.AdresBlokje = YCorner7.AdresBlokje;
+                YCorner7.AdresBlokje = BCorner3.AdresBlokje;
+                BCorner3.AdresBlokje = WCorner7.AdresBlokje;
+                WCorner7.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = GEdge4.AdresBlokje;
+                GEdge4.AdresBlokje = YEdge4.AdresBlokje;
+                YEdge4.AdresBlokje = BEdge6.AdresBlokje;
+                BEdge6.AdresBlokje = WEdge4.AdresBlokje;
+                WEdge4.AdresBlokje = onthoud;
+
                 #endregion
             }
             else
             {
                 #region Processing L'
+
+                //Oranje vlak draaien
+                //Corners
+                string onthoud = OCorner1.AdresBlokje;
+                OCorner1.AdresBlokje = OCorner7.AdresBlokje;
+                OCorner7.AdresBlokje = OCorner9.AdresBlokje;
+                OCorner9.AdresBlokje = OCorner3.AdresBlokje;
+                OCorner3.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = OEdge2.AdresBlokje;
+                OEdge2.AdresBlokje = OEdge4.AdresBlokje;
+                OEdge4.AdresBlokje = OEdge8.AdresBlokje;
+                OEdge8.AdresBlokje = OEdge6.AdresBlokje;
+                OEdge6.AdresBlokje = onthoud;
+
+                //Zijkanten
+                //Corner 1
+                onthoud = GCorner1.AdresBlokje;
+                GCorner1.AdresBlokje = WCorner1.AdresBlokje;
+                WCorner1.AdresBlokje = BCorner9.AdresBlokje;
+                BCorner9.AdresBlokje = YCorner1.AdresBlokje;
+                YCorner1.AdresBlokje = onthoud;
+
+                //Corner 7
+                onthoud = GCorner7.AdresBlokje;
+                GCorner7.AdresBlokje = WCorner7.AdresBlokje;
+                WCorner7.AdresBlokje = BCorner3.AdresBlokje;
+                BCorner3.AdresBlokje = YCorner7.AdresBlokje;
+                YCorner7.AdresBlokje = onthoud;
+
+                //Edge
+                onthoud = GEdge4.AdresBlokje;
+                GEdge4.AdresBlokje = WEdge4.AdresBlokje;
+                WEdge4.AdresBlokje = BEdge6.AdresBlokje;
+                BEdge6.AdresBlokje = YEdge4.AdresBlokje;
+                YEdge4.AdresBlokje = onthoud;
 
                 #endregion
             }
@@ -1008,7 +1084,8 @@ namespace GIPKubusProject
             lstBlokjes[BCorner9i] = BCorner9;
 
             #endregion
+
+            return lstBlokjes;
         }
     }
 }
-

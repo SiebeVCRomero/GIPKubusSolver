@@ -77,8 +77,14 @@ namespace GIPKubusProject
                 OEdge8 = new Blokje("OEdge8", "LeftMiddleDown"),
                 OCorner9 = new Blokje("OCorner9", "LeftRightDown");
 
-        
+        private void Scramble_Click(object sender, EventArgs e)
+        {
+            foreach (int item in Scrambler.Scramble(15))
+            {
 
+            }
+            ;
+        }
 
 
 
@@ -147,6 +153,7 @@ namespace GIPKubusProject
 
         //Al de turns via de buttons
         #region Turns
+
         private void Up_Click(object sender, EventArgs e)
         {
             Colorer(Turns.U(AlleBlokjes, false));
@@ -194,6 +201,16 @@ namespace GIPKubusProject
         private void BackPrime_Click(object sender, EventArgs e)
         {
             Colorer(Turns.B(AlleBlokjes, true));
+        }
+
+        private void Left_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.L(AlleBlokjes, false));
+        }
+
+        private void LeftPrime_Click(object sender, EventArgs e)
+        {
+            Colorer(Turns.L(AlleBlokjes, true));
         }
 
         #endregion
